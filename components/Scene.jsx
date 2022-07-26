@@ -1,7 +1,6 @@
 import React, { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import Model from "./Models/CarWithClouds";
 import DanceMoves from "./Models/DanceMoves1";
 import * as THREE from 'three'
 
@@ -10,8 +9,8 @@ const Scene = () => {
 
   return (
     <>
-    <div className="w-full h-[700px] p-0 m-0">
-    <Canvas className="">
+    <div className="w-full lg:h-[500px] p-0 m-0 bg-black rounded-b-[16%]">
+    <Canvas className="" alpha={true}>
       <ambientLight intensity={0.5}/>
       <pointLight intensity={2} position={[-1, 1, 3]} color="red" />
         <pointLight intensity={2} position={[1, 1, 3]} color="blue" />
@@ -23,7 +22,7 @@ const Scene = () => {
       </Suspense>
     </Canvas>
     </div>
-    <div className="controls flex flex-row justify-center items-center">
+    <div className="controls flex flex-row justify-center items-center ">
         <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("flair")}>do flair</button>
         <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("hipHop")}>do hip hop</button>
 

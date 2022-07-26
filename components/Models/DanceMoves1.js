@@ -16,6 +16,7 @@ export default function DanceMoves({ action }) {
       actions[previousAction].fadeOut(0.5)
       actions[action].stop()
     }
+    actions[action].setDuration(5)
     actions[action].play();
     actions[action].fadeIn(0.5)
   },[actions, action, previousAction])
