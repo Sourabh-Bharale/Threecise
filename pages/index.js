@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { Scene } from '../components'
+import { Squats, ThrillerMoves } from '../components'
 export default function Home() {
   return (
     <div className >
@@ -11,7 +11,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-     <Scene/>
+     <Squats/>
+     <ThrillerMoves/>
     </div>
   )
 }
