@@ -10,7 +10,7 @@ export default function DanceoffVro({ action }) {
   const previousAction=usePrevious(action)
   const { nodes, materials, animations } = useGLTF('/DanceOff.glb')
   const { actions } = useAnimations(animations, group)
-    console.log(actions);
+  
   useEffect(()=>{
     
     if(previousAction){
