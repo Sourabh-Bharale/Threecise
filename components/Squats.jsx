@@ -9,7 +9,7 @@ const Scene = () => {
 
   return (
     <>
-    <div className="w-full lg:h-[500px] p-0 m-0 bg-black rounded-b-[16%]">
+    <div className="w-full h-[500px]  p-0 m-0 bg-black rounded-b-[16%]">
     <Canvas  alpha={true}>
       <ambientLight intensity={0.5}/>
       <pointLight intensity={2} position={[-1, 1, 3]} color="red" />

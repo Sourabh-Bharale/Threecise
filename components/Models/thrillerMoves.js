@@ -10,7 +10,6 @@ export default function TMoves({ action }) {
   const previousAction=usePrevious(action)
   const { nodes, materials, animations } = useGLTF('/ThrillerMoves.glb')
   const { actions } = useAnimations(animations, group)
-    console.log(actions);
   useEffect(()=>{
  
     if(previousAction){
