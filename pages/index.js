@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { Squats, ThrillerMoves, HipHop } from '../components'
+import { Squats, ThrillerMoves, HipHop, Excercise1, Excercise2 } from '../components'
 export default function Home() {
   return (
     <div className >
@@ -12,8 +12,10 @@ export default function Home() {
       </Head>
 
      <Squats/>
-     <ThrillerMoves/>
-     <HipHop/>
+     {/* <ThrillerMoves/>
+     <HipHop/> */}
+     <Excercise1/>
+     <Excercise2/>
     </div>
   )
 }
