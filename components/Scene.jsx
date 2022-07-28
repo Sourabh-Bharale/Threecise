@@ -1,11 +1,11 @@
 import React, { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import DanceMoves from "./Models/DanceMoves1";
+import Model from "./Models/squats";
 import * as THREE from 'three'
 
 const Scene = () => {
-  const [action, setAction] = useState("flair");
+  const [action, setAction] = useState("idle");
 
   return (
     <>
@@ -18,13 +18,20 @@ const Scene = () => {
       <OrbitControls enableDamping={true} enableZoom={true} />
       
       <Suspense fallback={null}>
-        <DanceMoves action={action}/>
+        <Model action={action}/>
       </Suspense>
     </Canvas>
     </div>
-    <div className="controls flex flex-row justify-center items-center ">
-        <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("flair")}>do flair</button>
-        <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("hipHop")}>do hip hop</button>
+    <div className="controls flex flex-row justify-center items-center overflow-x-scroll">
+        <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("Air Squats")}>Air Squats</button>
+        <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("idle")}>idle</button>
+        <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("Air Squats Bent Arms")}>Air Squats Bent Arms</button>
+        <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("Overhead Squats Start")}>Overhead Squats Start</button>
+        <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("Overhead Squats End")}>Overhead Squats End</button>
+        <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("Overhead Squats Start")}>Overhead Squats Start</button>
+        <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("Back Squats Mid")}>Back Squats Mid</button>
+        <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("Back Squats Start")}>Back Squats Start</button>
+        <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("Back Squats End")}>Back Squats End</button>
 
       </div>
     </>
