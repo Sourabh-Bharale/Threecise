@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import HomePageMoves from "./Models/homePage";
 import * as THREE from "three";
-
+import Link from 'next/link'
 const Scene = () => {
   const [action, setAction] = useState("1");
 
@@ -80,7 +80,9 @@ const Scene = () => {
             </div>
             <div className="p-16 test1 text-[3rem] font-bold flex flex-row rounded-2xl  relative top-[100px] left-[50px] ">
               <div className="bg-gradient-to-t from-[#72FFFF] to-[#06B6D4] pl-2 rounded-xl mr-2"></div>
+             <Link href='/danceoff'>
               Dance Off
+              </Link>
             </div>
             <div className="p-16 test1 text-[3rem] font-bold flex flex-row rounded-2xl  relative top-[100px] left-[100px] ">
               <div className="bg-gradient-to-t from-[#72FFFF] to-[#06B6D4] pl-2 rounded-xl mr-2"></div>
