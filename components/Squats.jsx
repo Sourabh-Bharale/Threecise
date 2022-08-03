@@ -32,7 +32,7 @@ const Scene = () => {
         <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("Air Squats Bent Arms")}>Air Squats Bent Arms</button>
         <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("Overhead Squats Start")}>Overhead Squats Start</button>
         <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("Overhead Squats End")}>Overhead Squats End</button>
-        <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("Overhead Squats Start")}>Overhead Squats Start</button>
+        <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("Overhead Squats Mid")}>Overhead Squats Mid</button>
         <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("Back Squats Mid")}>Back Squats Mid</button>
         <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("Back Squats Start")}>Back Squats Start</button>
         <button className='font-semibold m-4 bg-gray-400 p-2 rounded-2xl flex justify-center items-center' onClick={() => setAction("Back Squats End")}>Back Squats End</button>
