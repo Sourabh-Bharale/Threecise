@@ -5,9 +5,12 @@ import { OrbitControls } from "@react-three/drei";
 import HomePageMoves from "./Models/homePage";
 import backima from '../public/img/bg.png';
 import classes from './Landing1.module.css';
+import Button from "./Button";
+import { faCode, faHighlighter } from '@fortawesome/free-solid-svg-icons';
+
 
 export default function Landing1({ index }) {
-  
+
     const [action, setAction] = useState(1);
 
     const colors = ['#A500F2', '#FFCF23', '#64D6E2', '#EF9F64', '#9988CD', '#A500F2', '#FFCF23', '#64D6E2', '#EF9F64', '#9988CD', '#A500F2', '#FFCF23', '#FFCF23'];
@@ -25,7 +28,12 @@ export default function Landing1({ index }) {
 
     return (
         <div className={classes.main} >
-        
+            
+            <div className={classes.buttonDiv}>
+                <Button icons={faCode} color="red" iconColor="white"/>
+                <Button icons={faHighlighter} color="red" iconColor="white"/>
+            </div>
+
             <div className={classes.backgroundImageDiv}>
                 <Image src={backima} alt="logo"></Image>
             </div>
