@@ -27,7 +27,23 @@
     margin:auto;
     justify-content: center;
     align-items: center;
+    /* animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-duration: 60s;
+    transition: 310ms; */
+    /* animation-name: planetRotate; */
 }
+@keyframes planetRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 .circleContainer li {
     position: absolute; 
@@ -62,4 +78,64 @@
 .outerCircle:hover{
     border: 2px solid;
     cursor: pointer;
+}
+
+.xxx{
+    position: absolute;
+    display: flex;
+    margin:auto;
+    justify-content: center;
+    align-items: center;
+    left:23%;
+    top:-5%;
+    transform: translate(-50%, -50%);
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-duration: 60s;
+    transition: 310ms;
+    animation-name: planetRotate;
+}
+.yyy{
+    position: absolute;
+    display: flex;
+    margin:auto;
+    justify-content: center;
+    align-items: center;
+    left:20%;
+    top:-10%;
+    transform: translate(-50%, -50%);
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-duration: 40s;
+    transition: 310ms;
+    animation-name: planetRotate;
+}
+.zzz{
+    position: absolute;
+    display: flex;
+    margin:auto;
+    justify-content: center;
+    align-items: center;
+    left:22%;
+    top:-12%;
+    transform: translate(-50%, -50%);
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-duration: 40s;
+    transition: 310ms;
+    animation-name: planetRotate;
+}
+
+
+.ghumaiya{
+    position: absolute;
+    left:0;
+    list-style: none;
+    transform-origin: 400px;
 }
