@@ -21,6 +21,7 @@ export default function HomePageMoves({ action }) {
     actions[action].play();
     actions[action].fadeIn(0.5)
   },[actions, action, previousAction])
+  
   return (
     <group ref={group} dispose={null}>
       <group name="Scene">
