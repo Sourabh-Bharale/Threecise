@@ -1,3 +1,10 @@
+
+.buttonDiv{
+    display: flex;
+    /* justify-content: center; */
+    align-content: center;
+}
+
 .button{
     width: 5rem;
     height: 5rem;
@@ -8,6 +15,43 @@
     cursor:pointer;
     margin:20px;
 }
+
+
+
 .icon{
     width: 500px;
+}
+
+.hoverDiv{
+    position:relative;
+    background-color: white;
+    height: fit-content;
+    padding:1rem;
+    border-radius: 1.7rem;
+    color:#413F42;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto 0;
+    display: none;
+}
+
+.button:hover .hoverDiv, .buttonDiv:hover .hoverDiv{
+    display: inline;
+    animation: 0.6s slide-right;
+    
+}
+
+
+@keyframes slide-right {
+    from {
+      margin-left: -4%;
+    }
+    to {
+      margin-left: 0%;
+    }
+  }
+.hoverDiv h1{
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
 }
