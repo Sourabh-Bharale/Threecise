@@ -42,8 +42,8 @@ export default function Landing1({ index }) {
                     </Suspense>
                 </Canvas>
 
-                {Array(7).fill(1).map((el, i) =>
-                    <li key={i} style={{ transform: `rotate(calc(360deg / 7 * ${i}))` }}>
+                {Array(13).fill(1).map((el, i) =>
+                    <li key={i} style={{ transform: `rotate(calc(360deg / 12 * ${i}))` }}>
                         {hoveredCircle == i ?
                             <div style={{ border: `2px solid ${colors[i]}`, }}
                                 className={classes.outerCircle}
