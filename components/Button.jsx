@@ -24,7 +24,7 @@ export default function Button(props) {
                     onMouseLeave={handleMouseLeave}>
                     {hoveredCircle == 1 ?
                         <FontAwesomeIcon className={classes.icon} icon={props.icons} color={props.iconColor} size="2x"/> :
-                        <FontAwesomeIcon className={classes.icon} icon={props.icons} color={props.iconColor} size="2x"/>
+                        <FontAwesomeIcon className={classes.icon} icon={props.icons} color={props.iconColor} size="2x"  />
                     }
                 </div>
             </Link>
