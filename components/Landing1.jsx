@@ -30,7 +30,7 @@ export default function Landing1({ index }) {
                 <Image src={backima} alt="logo"></Image>
             </div>
 
-            <div class={classes.circleContainer}>
+            <div className={classes.circleContainer}>
                 <Canvas alpha={false}>
                     <ambientLight intensity={0.5} />
                     <pointLight intensity={2} position={[-1, 1, 3]} color="#2C3333" />
@@ -42,8 +42,8 @@ export default function Landing1({ index }) {
                     </Suspense>
                 </Canvas>
 
-                {Array(12).fill(1).map((el, i) =>
-                    <li key={i} style={{ transform: `rotate(calc(360deg / 12 * ${i}))` }}>
+                {Array(7).fill(1).map((el, i) =>
+                    <li key={i} style={{ transform: `rotate(calc(360deg / 7 * ${i}))` }}>
                         {hoveredCircle == i ?
                             <div style={{ border: `2px solid ${colors[i]}`, }}
                                 className={classes.outerCircle}
