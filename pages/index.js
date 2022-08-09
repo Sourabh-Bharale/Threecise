@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { Squats, ThrillerMoves, HipHop, Excercise1, Excercise2, DanceOff, FunMoves, Landing } from '../components'
+import { Squats, ThrillerMoves, HipHop, Excercise1, Excercise2, DanceOff, FunMoves } from '../components'
+import Landing1 from '../components/Landing1'
 
 export default function Home() {
   return (
@@ -17,7 +18,8 @@ export default function Home() {
      <HipHop/>
      <Excercise1/>
      <Excercise2/> */}
-     <Landing/>
+     <Landing1 />
+     {/* <Bird/> */}
      {/* <DanceOff/>
      <FunMoves/> */}
     </div>

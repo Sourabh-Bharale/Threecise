@@ -1,0 +1,61 @@
+
+.main{
+    display: flex;
+    min-height: 100vh;
+   color:white;
+   align-items: center;
+   text-align: center;
+}
+
+.backgroundImageDiv{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+
+.circleContainer {
+    position: relative;
+    /* background-color: aqua; */
+    display: flex;
+    height: 600px;
+    width: 600px;
+    margin:auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.circleContainer li {
+    position: absolute; 
+    left:0;
+    list-style: none;
+    transform-origin: 300px;
+}      
+    
+.dot {
+    height: 8px;
+    width: 8px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+}
+.dot:hover{
+    height: 18px;
+    width: 18px;
+    
+}
+
+.outerCircle{
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+}
+.outerCircle:hover{
+    border: 2px solid;
+    cursor: pointer;
+}
