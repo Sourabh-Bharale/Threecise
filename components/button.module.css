@@ -1,0 +1,13 @@
+.button{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    margin:20px;
+}
+.icon{
+    width: 500px;
+}

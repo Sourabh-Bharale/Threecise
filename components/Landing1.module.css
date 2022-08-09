@@ -14,6 +14,10 @@
     transform: translate(-50%, -50%);
 }
 
+.buttonDiv{
+    position: absolute;
+}
+
 .circleContainer {
     position: relative;
     /* background-color: aqua; */
