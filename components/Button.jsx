@@ -17,8 +17,8 @@ export default function Button(props) {
     };
 
     return (
-        <div>
-            <Link href="/">
+        <div className={classes.buttonDiv}>
+            <Link href={props.href}>
                 <div className={classes.button} style={{ border: `0.3rem solid ${props.color}` }}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}>
@@ -28,6 +28,9 @@ export default function Button(props) {
                     }
                 </div>
             </Link>
+            <div className={classes.hoverDiv}>
+                <h1>{props.text}</h1>
+            </div>
         </div>
     )
 }

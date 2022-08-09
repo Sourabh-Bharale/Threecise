@@ -6,7 +6,7 @@ import HomePageMoves from "./Models/homePage";
 import backima from '../public/img/bg.png';
 import classes from './Landing1.module.css';
 import Button from "./Button";
-import { faCode, faHighlighter } from '@fortawesome/free-solid-svg-icons';
+import { faBars , faFaceGrinBeam}  from '@fortawesome/free-solid-svg-icons';
 import triangle1 from '../public/img/triangle1.png'
 import triangle2 from '../public/img/triangle2.png'
 import triangle3 from '../public/img/triangle3.png'
@@ -54,8 +54,8 @@ export default function Landing1({ index }) {
         <div className={classes.main} >
 
             <div className={classes.buttonDiv}>
-                <Button icons={faCode} color="red" iconColor="white" />
-                <Button icons={faHighlighter} color="red" iconColor="white" />
+                <Button href={"/"} icons={faBars} color="red" iconColor="white" text="Category"/>
+                <Button href={"/"}  icons={faFaceGrinBeam} color="red" iconColor="white" text="About creators"/>
             </div>
 
             <div className={classes.backgroundImageDiv}>

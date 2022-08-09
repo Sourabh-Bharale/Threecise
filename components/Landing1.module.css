@@ -95,6 +95,7 @@
     animation-timing-function: linear;
     animation-duration: 60s;
     transition: 310ms;
+    z-index: -10;
     animation-name: planetRotate;
 }
 .yyy{
@@ -113,6 +114,7 @@
     animation-duration: 40s;
     transition: 310ms;
     animation-name: planetRotate;
+    z-index: -10;
 }
 .zzz{
     position: absolute;
@@ -129,6 +131,7 @@
     animation-timing-function: linear;
     animation-duration: 40s;
     transition: 310ms;
+    z-index: -10;
     animation-name: planetRotate;
 }
 
