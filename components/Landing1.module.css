@@ -136,9 +136,32 @@
 }
 
 
-.ghumaiya{
+.backgroundTriangles{
     position: absolute;
     left:0;
     list-style: none;
     transform-origin: 400px;
+}
+
+.canvasDiv{
+    width:400px;
+    height: 350px;
+    border-radius: 50%;
+    top:12%;
+    position: absolute;
+}
+
+.contentDiv{
+    position: absolute;
+    top: 68%;
+    text-transform: uppercase;
+    
+}
+.contentDiv h1{
+    font-size: 2.3rem;
+    letter-spacing: 0.2rem;
+}
+.contentDiv h4{
+    letter-spacing: 0.1rem;
+    color:#73777B;
 }
