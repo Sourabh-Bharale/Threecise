@@ -13,7 +13,7 @@ const Scene = () => {
         <h1 className="lg:text-[10rem] text-[6rem] font-semibold">How do i?</h1>
       </div>
       <div className="lg:ml-8 lg:pr-8 flex lg:flex-row flex-col lg:bg-gradient-to-r bg-gradient-to-b from-[#A5C9CA] to-[#2C3333] lg:bg-inherit rounded-b-[16%] lg:rounded-b-none lg:from-[#2C3333] lg:via-[#A5C9CA]">
-        <div className="lg:w-[900px]  w-[100vw] lg:h-[700px] h-[60vh] ">
+        <div className="  w-[100vw] h-[100vh] ">
           <Canvas alpha={false}>
             <ambientLight intensity={0.5} />
             <pointLight intensity={2} position={[-1, 1, 3]} color="#2C3333" />
