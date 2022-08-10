@@ -10,14 +10,14 @@ export default function HomePageMoves({ action }) {
   const previousAction=usePrevious(action)
   const { nodes, materials, animations } = useGLTF('/homePage.glb')
   const { actions } = useAnimations(animations, group)
-
+  console.log(actions);
   useEffect(()=>{
     
     if(previousAction){
       actions[previousAction].fadeOut(0.5)
       actions[action].stop()
     }
-    // actions[action].setDuration(5) 
+    // actions[action].setDuration(10) 
     actions[action].play();
     actions[action].fadeIn(0.5)
   },[actions, action, previousAction])
