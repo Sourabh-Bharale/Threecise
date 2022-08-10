@@ -13,6 +13,7 @@ import triangle3 from '../public/img/triangle3.png'
 import triangle4 from '../public/img/triangle4.png'
 import triangle5 from '../public/img/triangle5.png'
 import './Landing1.module.css';
+import Link from "next/link";
 
 export default function Landing1({ index }) {
 
@@ -111,7 +112,9 @@ export default function Landing1({ index }) {
                 </div>
 
                 {Array(13).fill(1).map((el, i) =>
+                
                     <li key={i} style={{ transform: `rotate(calc(360deg / 12 * ${i}))` }}>
+                        <Link href="/dance">
                         {hoveredCircle == i ?
                             <div style={{ border: `2px solid ${colors[i]}`, }}
                                 className={classes.outerCircle}
@@ -134,7 +137,7 @@ export default function Landing1({ index }) {
                                     className={classes.dot}></span>
                             </div>
                         }
-
+                        </Link>
                     </li>
                 )}
                 

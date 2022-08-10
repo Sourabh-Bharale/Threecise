@@ -17,7 +17,7 @@ export default function Button(props) {
     };
 
     return (
-        <div className={classes.buttonDiv}>
+        <div className={classes.buttonDiv} style={{flexDirection:`${props.direction=="left"?"row":"row-reverse"}`}}>
             <Link href={props.href}>
                 <div className={classes.button} style={{ border: `0.3rem solid ${props.color}` }}
                     onMouseEnter={handleMouseEnter}
