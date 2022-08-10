@@ -1,0 +1,46 @@
+.backgroundDiv{
+    background-color: aliceblue;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.canvasDiv{
+    width: 95vw;
+    height: 90vh;
+    background-color: #EF9F64;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.leftButtonDiv{
+    position: absolute;
+    left:2%;
+}
+.rightButtonDiv{
+    position: absolute;
+    right:2%;
+}
+
+.checkCode{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 0.4rem;
+    margin:0.6rem auto;
+    margin-right: 0;
+    position: relative;
+}   
+.checkCode h1{
+    text-align: center;
+    color:#EF9F64;
+    font-size: 1.3rem;
+}
