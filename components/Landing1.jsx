@@ -52,8 +52,8 @@ export default function Landing1({ index }) {
         <div className={classes.main} >
 
             <div className={classes.buttonDiv}>
-                <Button href={"/category"} icons={faBars} color="red" iconColor="white" text="Category" />
-                <Button href={"/creators"} icons={faFaceGrinBeam} color="red" iconColor="white" text="About creators" />
+                <Button href={"/category"} icons={faBars} color="red" iconColor="white" text="Category" direction="left"/>
+                <Button href={"/creators"} icons={faFaceGrinBeam} color="red" iconColor="white" text="About creators" direction="left"/>
             </div>
 
             <div className={classes.backgroundImageDiv}>
