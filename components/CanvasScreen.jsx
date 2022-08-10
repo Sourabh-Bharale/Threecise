@@ -11,7 +11,7 @@ import Link from 'next/link';
 export default function CanvasScreen(props) {
     return (
         <div className={classes.backgroundDiv}>
-            <div className={classes.canvasDiv}>
+            <div className={classes.canvasDiv} style={{backgroundColor:`${props.backgroundColor}`}}>
                 <Image src={lightImage} alt="background image" />
                 <div className={classes.leftButtonDiv}>
                     <Button href={"/"} icons={faHouseChimneyCrack} color="#413D3D" iconColor="white" text="Home" direction="left" />

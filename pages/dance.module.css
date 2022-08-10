@@ -1,0 +1,9 @@
+.outerDiv{
+    position: absolute;
+    z-index: 100;
+    left:50%;
+    top:35%;
+    transform: translate(-50%, -50%);
+    height: 30rem;
+    width:70%
+}
