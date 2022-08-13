@@ -67,7 +67,7 @@ export default function Landing1({ index }) {
                 {Array(5).fill(1).map((el, i) =>
                     <>
                         <li className={classes.backgroundTriangles} key={i} style={{ transform: `rotate(calc(360deg / 5 * ${i}))`, transformOrigin: "400px", opacity: `${opac[i]}` }}>
-                            <Image key={i} src={triangles[c1[i] - 1]} ></Image>
+                            <Image key={i} src={triangles[c1[i] - 1]} alt="logo"></Image>
                         </li>
                     </>
                 )}
@@ -76,7 +76,7 @@ export default function Landing1({ index }) {
                 {Array(7).fill(1).map((el, i) =>
                     <>
                         <li className={classes.backgroundTriangles} key={i} style={{ transform: `rotate(calc(360deg / 7 * ${i}))`, transformOrigin: "450px", opacity: `${opac[i]}` }}>
-                            <Image key={i} src={triangles[c2[i] - 1]} ></Image>
+                            <Image key={i} src={triangles[c2[i] - 1]} alt="logo"></Image>
                         </li>
                     </>
                 )}
@@ -85,7 +85,7 @@ export default function Landing1({ index }) {
                 {Array(8).fill(1).map((el, i) =>
                     <>
                         <li className={classes.backgroundTriangles} key={i} style={{ transform: `rotate(calc(360deg / 8 * ${i}))`, transformOrigin: "430px", opacity: `${opac[i]}` }}>
-                            <Image key={i} src={triangles[c3[i] - 1]} ></Image>
+                            <Image key={i} src={triangles[c3[i] - 1]} alt="logo"></Image>
                         </li>
                     </>
                 )}
