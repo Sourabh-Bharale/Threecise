@@ -6,6 +6,8 @@ import HomePageMoves from "./Models/homePage";
 import backima from '../public/img/bg.png';
 import classes from './Landing1.module.css';
 import Button from "./Button";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import fontawesome from '@fortawesome/fontawesome';
 import { faBars, faFaceGrinBeam } from '@fortawesome/free-solid-svg-icons';
 import triangle1 from '../public/img/triangle1.png'
 import triangle2 from '../public/img/triangle2.png'
@@ -14,6 +16,7 @@ import triangle4 from '../public/img/triangle4.png'
 import triangle5 from '../public/img/triangle5.png'
 import './Landing1.module.css';
 import Link from "next/link";
+library.add(faBars, faFaceGrinBeam);
 
 export default function Landing1({ index }) {
 

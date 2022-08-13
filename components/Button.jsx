@@ -17,17 +17,28 @@ export default function Button(props) {
     };
 
     return (
-        <div className={classes.buttonDiv} style={{flexDirection:`${props.direction=="left"?"row":"row-reverse"}`, animation:`${props.direction=="left"?"0.6s slide-right":"0.6s slide-left"}`}}>
-            <Link href={props.href}>
+        <div className={classes.buttonDiv} style={{ flexDirection: `${props.direction == "left" ? "row" : "row-reverse"}`, animation: `${props.direction == "left" ? "0.6s slide-right" : "0.6s slide-left"}` }}>
+            {props.href === "xxx" ?
                 <div className={classes.button} style={{ border: `0.3rem solid ${props.color}` }}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}>
                     {hoveredCircle == 1 ?
-                        <FontAwesomeIcon className={classes.icon} icon={props.icons} color={props.iconColor} size="2x"/> :
-                        <FontAwesomeIcon className={classes.icon} icon={props.icons} color={props.iconColor} size="2x"  />
+                        <FontAwesomeIcon className={classes.icon} icon={props.icons} color={props.iconColor} size="2x" /> :
+                        <FontAwesomeIcon className={classes.icon} icon={props.icons} color={props.iconColor} size="2x" />
                     }
-                </div>
-            </Link>
+                </div> :
+                <Link href={props.href}>
+                    <div className={classes.button} style={{ border: `0.3rem solid ${props.color}` }}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}>
+                        {hoveredCircle == 1 ?
+                            <FontAwesomeIcon className={classes.icon} icon={props.icons} color={props.iconColor} size="2x" /> :
+                            <FontAwesomeIcon className={classes.icon} icon={props.icons} color={props.iconColor} size="2x" />
+                        }
+                    </div>
+                </Link>
+            }
+
             <div className={classes.hoverDiv}>
                 <h1>{props.text}</h1>
             </div>

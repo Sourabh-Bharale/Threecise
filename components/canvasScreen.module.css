@@ -10,7 +10,7 @@
 .canvasDiv{
     width: 95vw;
     height: 90vh;
-    background-color: #EF9F64;
+    /* background-color: #EF9F64; */
     display: flex;
     align-items: center;
     justify-content: center;
