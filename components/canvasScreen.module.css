@@ -10,7 +10,7 @@
 .canvasDiv{
     width: 95vw;
     height: 90vh;
-    background-color: #EF9F64;
+    /* background-color: #EF9F64; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +41,7 @@
 }   
 .checkCode h1{
     text-align: center;
-    color:#EF9F64;
+    /* color:#EF9F64; */
     font-size: 1.3rem;
 }
 
