@@ -3,7 +3,6 @@ import classes from './canvasScreen.module.css';
 import lightImage from '../public/img/lightbg.png';
 import Image from 'next/image';
 import Button from './Button';
-import fontawesome from '@fortawesome/fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faBars, faVolumeHigh, faHouseChimneyCrack, faArrowUp, faArrowDown, faBookOpen } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-regular-svg-icons'
@@ -22,9 +21,6 @@ export default function CanvasScreen(props) {
                     <Button href={"/category"} icons={faBars} color="#413D3D" iconColor="white" text="Category" direction="left" />
                     <Button href={"/category"} icons={faVolumeHigh} color="#413D3D" iconColor="white" text="Mute" direction="left" />
                 </div>
-
-
-
                 <div className={classes.contentDiv}>
                     <div className={classes.category}>
                         <div style={{ textTransform: "uppercase" }}>

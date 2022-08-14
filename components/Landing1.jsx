@@ -7,7 +7,6 @@ import backima from '../public/img/bg.png';
 import classes from './Landing1.module.css';
 import Button from "./Button";
 import { library } from '@fortawesome/fontawesome-svg-core';
-import fontawesome from '@fortawesome/fontawesome';
 import { faBars, faFaceGrinBeam } from '@fortawesome/free-solid-svg-icons';
 import triangle1 from '../public/img/triangle1.png'
 import triangle2 from '../public/img/triangle2.png'
