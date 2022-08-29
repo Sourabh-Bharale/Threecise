@@ -8,7 +8,7 @@ import Button from "../components/Button";
 import { faArrowUp, faArrowDown} from '@fortawesome/free-solid-svg-icons';
 
 export default function Excercises() {
-    const actions = ["idle","Bicycle Crunch","Burpee","Cartwheel","Jump Pushup","Pike Walk","Pike Walk","Piston","Pushup","Quick Steps","Situps","Snatch","Sumo High Pull"]
+    const actions = ["idle","Bicycle Crunch","Burpee","Cartwheel","Jump Pushup","Pike Walk","Piston","Pushup","Quick Steps","Situps","Snatch","Sumo High Pull"]
 
     const colors = ['#A500F2', '#FFCF23', '#64D6E2', '#EF9F64', '#9988CD', '#A500F2', '#FFCF23', '#64D6E2', '#EF9F64', '#9988CD'];
 
@@ -17,8 +17,8 @@ export default function Excercises() {
     const handlePrevious = () => {
         var l = index - 1;
         if (l == -1) {
-            setAction(actions[12]);
-            setIndex(12);
+            setAction(actions[11]);
+            setIndex(11);
         }
         else{
             setAction(actions[l]);
@@ -27,7 +27,7 @@ export default function Excercises() {
     }
     const handleNext = () => {
         var l = index + 1;
-        if (l == 13) {
+        if (l == 12) {
             setAction(actions[0]);
             setIndex(0);
         }
