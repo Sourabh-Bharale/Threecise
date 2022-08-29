@@ -10,7 +10,7 @@ export default function EMode1({ action }) {
   const previousAction=usePrevious(action)
   const { nodes, materials, animations } = useGLTF('/excercise1.glb')
   const { actions } = useAnimations(animations, group)
-
+  // console.log(actions);
   useEffect(()=>{
     
     if(previousAction){

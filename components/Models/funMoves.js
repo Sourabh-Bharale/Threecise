@@ -11,16 +11,16 @@ export default function Funmoves({ action }) {
   const { nodes, materials, animations } = useGLTF('/funMoves.glb')
   const { actions } = useAnimations(animations, group)
     console.log(actions);
-  useEffect(()=>{
+    useEffect(()=>{
     
-    if(previousAction){
-      actions[previousAction].fadeOut(0.5)
-      actions[action].stop()
-    }
-    // actions[action].setDuration(5) 
-    actions[action].play();
-    actions[action].fadeIn(0.5)
-  },[actions, action, previousAction])
+      if(previousAction){
+        actions[previousAction].fadeOut(0.5)
+        actions[action].stop()
+      }
+      // actions[action].setDuration(5) 
+      actions[action].play();
+      actions[action].fadeIn(0.5)
+    },[actions, action, previousAction])
   return (
     <group ref={group} dispose={null}>
       <group name="Scene">

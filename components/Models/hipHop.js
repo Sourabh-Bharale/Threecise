@@ -10,7 +10,7 @@ export default function HMoves({ action }) {
   const previousAction=usePrevious(action)
   const { nodes, materials, animations } = useGLTF('/HipHop.glb')
   const { actions } = useAnimations(animations, group)
-
+ console.log(actions);
   useEffect(()=>{
     
     if(previousAction){

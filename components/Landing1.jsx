@@ -26,6 +26,7 @@ export default function Landing1({ index }) {
     const colors = ['#A500F2', '#FFCF23', '#64D6E2', '#EF9F64', '#9988CD', '#A500F2', '#FFCF23', '#64D6E2', '#EF9F64', '#9988CD', '#A500F2', '#FFCF23', '#FFCF23'];
     const triangles = [triangle1, triangle2, triangle3, triangle4, triangle5];
     const dances = ["Dance", "Karate", "Excercise", "yoga", "Dance", "Excercise", "Excercise", "yoga", "Dance", "Dance", "Karate", "Excercise", "yoga"];
+    const pages = ['/dance']
 
     const [hoveredCircle, setHoveredCircle] = useState(6);
     const [currentDance, setCurrentDance] = useState(6);
@@ -110,11 +111,12 @@ export default function Landing1({ index }) {
                         become proficient in <span style={{color:"white"}}>{dances[currentDance]}</span>
                     </h4>
                 </div>
-
+              
                 {Array(13).fill(1).map((el, i) =>
                 
                     <li key={i} style={{ transform: `rotate(calc(360deg / 12 * ${i}))` }}>
-                        <Link href="/dance">
+                        {/* {console.log(i)} */}
+                        <Link href={`${pages[1]}`}>
                         {hoveredCircle == i ?
                             <div style={{ border: `2px solid ${colors[i]}`, }}
                                 className={classes.outerCircle}
