@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Button from './Button';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faBars, faVolumeHigh, faHouseChimneyCrack, faArrowUp, faArrowDown, faBookOpen } from '@fortawesome/free-solid-svg-icons';
-import { faWhatsapp } from '@fortawesome/free-regular-svg-icons'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 
@@ -51,7 +51,7 @@ export default function CanvasScreen(props) {
                     <h1>ALL COPYRIGHT RESERVED</h1>
                     <div className={classes.line}></div>
                     <Link href="/">SHARE </Link>
-                    <FontAwesomeIcon className={classes.icon} icon={faWhatsapp} color={props.iconColor} size="2x" />
+                
                 </div>
             </div>
         </div>
