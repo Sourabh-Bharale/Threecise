@@ -23,7 +23,7 @@ export function CreatorSourabh({ action }) {
     actions[action].fadeIn(0.5)
   },[actions, action, previousAction])
   return (
-    <group ref={group} dispose={null}>
+    <group ref={group} dispose={null}  scale={[1.5,1.5,1.5]}>
       <group name="Scene" position={[-0.5,0,0]}>
         <group name="sourabh">
           <primitive object={nodes.Hips} />
