@@ -19,6 +19,7 @@ import { CreatorSourabh } from '../components/Models/Sourabh'
 import { CreatorAryan } from '../components/Models/Aryan'
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import { PresentationControls } from "@react-three/drei"
 
 function category() {
   const actions = ["default"]
@@ -38,11 +39,16 @@ function category() {
         <pointLight intensity={2} position={[-1, 1, 3]} color="#A5C9CA" />
         <pointLight intensity={2} position={[1, 1, 3]} color="#395B64" />
         <pointLight intensity={2} position={[0, 3, -10]} color="#2C3639" />
-        <OrbitControls enableDamping={true} enableZoom={true} />
+        {/* <OrbitControls enableDamping={true} enableZoom={true} />
+         */}
+        <PresentationControls global zoom={0.8} rotation={[0,0,0]} polar={[0, Math.PI / 4]} azimuth={[-Math.PI / 4, Math.PI / 4]}>
+
         <Suspense fallback={null}>
           <CreatorSourabh action={action} />
           <CreatorAryan action2={action2} />
         </Suspense>
+        </PresentationControls>
+
       </Canvas>
       </div>
       <div className={classes.backgroundImg}>
