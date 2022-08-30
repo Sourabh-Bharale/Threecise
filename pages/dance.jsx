@@ -6,6 +6,8 @@ import CanvasScreen from '../components/CanvasScreen'
 import classes from "./dance.module.css"
 import Button from "../components/Button";
 import { faArrowUp, faArrowDown} from '@fortawesome/free-solid-svg-icons';
+import useSound from 'use-sound';
+
 
 export default function Dance() {
     const actions = ["idle", "Belly Dance", "Shopping Cart ", "Break Dance1", "Dance Tweark", "Flair", "Gagnam Style", "House Dance", "Silly", "Soul Spin Combo"]
@@ -13,15 +15,23 @@ export default function Dance() {
 
     const [action, setAction] = useState(actions[1]);
     const [index, setIndex] = useState(1);
+
+    const hoverSfx = '/sounds/hover.mp3';
+    const [hoverPlay, { hoverStop }] = useSound(hoverSfx);
     const handlePrevious = () => {
         var l = index - 1;
         if (l == -1) {
             setAction(actions[9]);
             setIndex(9);
+            hoverPlay();
+
+
         }
         else{
             setAction(actions[l]);
             setIndex(l);
+            hoverPlay();
+
         }
     }
     const handleNext = () => {
@@ -29,10 +39,14 @@ export default function Dance() {
         if (l == 10) {
             setAction(actions[0]);
             setIndex(0);
+            hoverPlay();
+
         }
         else{
             setAction(actions[l]);
             setIndex(l);
+            hoverPlay();
+
         }
     }
 

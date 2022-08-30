@@ -46,7 +46,7 @@ export default function CanvasScreen(props) {
                 </div>
 
                 <div className={classes.bottomLinks}>
-                    <Link href="/">ABOUT US</Link>
+                    <Link href="/creators">ABOUT US</Link>
                     <div className={classes.line}></div>
                     <h1>ALL COPYRIGHT RESERVED</h1>
                     <div className={classes.line}></div>
