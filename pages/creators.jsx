@@ -1,44 +1,28 @@
 import React from 'react'
 import Button from '../components/Button'
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
-import classes from "./category.module.css"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import classes from "./creators.module.css"
 import Link from 'next/link'
-function category(props) {
+import Image from 'next/image'
+import aryan from '.././public/img/aj.png'
+import aryanSign from '.././public/img/Aryan Jangid.svg'
+import sourabhSign from '.././public/img/Sourabh Bharale.svg'
+import linkimg from '.././public/img/link.svg'
+import insta from '.././public/img/insta.svg'
+import linked from '.././public/img/linked.svg'
+import git from '.././public/img/git.svg'
+import background from '.././public/img/create back.jpg'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
-  const colors = ['#A500F2', '#FFCF23', '#64D6E2', '#EF9F64', '#9988CD', '#A500F2', '#FFCF23', '#64D6E2', '#EF9F64', '#9988CD'];
-  const getRandom = () => {
-    return Math.floor(Math.random() * 10);
-  }
-  console.log(getRandom());
+
+function category() {
 
   return (
     <div>
-      <div className={classes.closeButtonDiv}>
-        <Link href="/">
-          <div className={classes.button} style={{ border: `0.3rem solid white` }}>
-            <FontAwesomeIcon className={classes.icon} icon={faXmark} color="red" size="2x" />
-          </div>
-        </Link>
+      <div className={classes.backgroundImg}>
+      <Image src={background}></Image>
       </div>
-      <div className={classes.grid}>
-        <div className={classes.gridContainer}>
-          <div className={classes.i1}>1</div>
-          <div className={classes.i2}>2</div>
-          <div className={classes.i3}>3</div>
-          <div className={classes.i4}>4</div>
-          <div className={classes.i5}>5</div>
-          <div className={classes.i6}>6</div>
-          <div className={classes.null1} style={{backgroundColor:`${colors[getRandom()]}`}}></div>
-          <div className={classes.null2} style={{backgroundColor:`${colors[getRandom()]}`}}></div>
-          <div className={classes.null3} style={{backgroundColor:`${colors[getRandom()]}`}}></div>
-          <div className={classes.null4} style={{backgroundColor:`${colors[getRandom()]}`}}></div>
-          <div className={classes.null5} style={{backgroundColor:`${colors[getRandom()]}`}}></div>
-          <div className={classes.null6} style={{backgroundColor:`${colors[getRandom()]}`}}></div>
-          <div className={classes.null7} style={{backgroundColor:`${colors[getRandom()]}`}}></div>
-        </div>
-      </div>
-
+      
     </div>
   )
 }
