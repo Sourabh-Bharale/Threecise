@@ -1,8 +1,0 @@
-export {default as Squats } from './Squats'
-export {default as ThrillerMoves } from './ThrillerMoves'
-export {default as HipHop } from './HipHop'
-export {default as Excercise1 } from './Excercise1'
-export {default as Excercise2 } from './Excercise2'
-export {default as DanceOff } from './DanceOff'
-export {default as FunMoves } from './FunMoves'
-export {default as Landing } from './Landing'

@@ -1,0 +1,117 @@
+.closeButtonDiv{
+    padding:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:2rem auto;
+}
+
+.button{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    margin:10px;
+    margin-left: 20px;
+}
+
+
+.icon{
+    width: 500px;
+}
+
+.grid{
+    padding:0 6rem;
+}
+.gridContainer {
+    display: grid;
+    grid-template-areas:
+      'null header header header menu menu null2 i3'
+      'i4 null3 null3 main main main null4 i3'
+      'i4 null3 null3 i5 i5 null5 null4 i3'
+      'i4 null6 null6 null6 null6 xx xx xx';
+    gap: 20px;
+    padding: 10px;
+  }
+  .item3{
+  height:140px;}
+  
+  .gridContainer > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    border-radius:20px;
+    transition: transform .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gridContainer > div:hover{
+    transform: scale(1.05);
+  }
+
+.i1 { 
+    grid-area: header;
+    background-color: white;
+    cursor: pointer;
+ }
+
+.i2 { 
+    background-color: white;
+    cursor: pointer;
+    grid-area: menu;
+ }
+
+.i3 {
+    background-color: white;
+    cursor: pointer;
+    grid-area:i3;
+}
+.i4 {
+    background-color: white;
+    cursor: pointer;
+    grid-area:i4;
+}
+.i5 {
+    background-color: white;
+    cursor: pointer;
+    grid-area:i5;
+}
+.i6 {
+    background-color: white;
+    cursor: pointer;
+    grid-area:xx;
+}
+.null1 { 
+    grid-area: null;
+    background-color: #FFCF23;
+
+ }
+.null2 {
+    background-color: #FFCF23;
+    grid-area:null2;
+}
+.null3 {
+    background-color: #FFCF23;
+    grid-area:null3;
+}
+.null4 {
+    background-color: #FFCF23;
+    grid-area:null4;
+}
+.null5 {
+    background-color: #FFCF23;
+    grid-area:null5;
+}
+.null6 {
+    background-color: #FFCF23;
+    grid-area:null6;
+}
+.null7 {
+    background-color: #FFCF23;
+    grid-area: main;
+    height: 140px;
+     }
