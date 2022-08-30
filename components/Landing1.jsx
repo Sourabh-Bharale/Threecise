@@ -14,6 +14,7 @@ import triangle4 from '../public/img/triangle4.png'
 import triangle5 from '../public/img/triangle5.png'
 import './Landing1.module.css';
 import Link from "next/link";
+import useSound from 'use-sound';
 
 export default function Landing1({ index }) {
 
@@ -37,17 +38,35 @@ export default function Landing1({ index }) {
     // }
 
     const handleMouseEnter = (i) => {
+        hoverPlay()
         setHoveredCircle(i);
         setAction(i);
         setCurrentDance(i);
         setCurrentColor(i);
     };
     const handleMouseLeave = () => {
+        hoverStop()
         setHoveredCircle(6);
         setAction(6);
         setCurrentDance(6);
         setCurrentColor(6);
     };
+
+        // soundeffects
+        const hoverSfx = '/sounds/hover.mp3';
+        const [hoverPlay, { hoverStop }] = useSound(hoverSfx);
+
+        const pageChangeSFX = '/sounds/pageLoad.mp3'
+        const [pageChange] = useSound(pageChangeSFX)
+      
+        // return (
+        //   <button onMouseEnter={() => play()} onMouseLeave={() => stop()}>
+        //     <span role="img" aria-label="trumpet">
+        //       🎺
+        //     </span>
+        //   </button>
+        // )
+    
 
     return (
         <div className={classes.main} >
@@ -114,14 +133,22 @@ export default function Landing1({ index }) {
               
                 {Array(13).fill(1).map((el, i) =>
                 
-                    <li key={i} style={{ transform: `rotate(calc(360deg / 12 * ${i}))` }}>
+                    <li key={i} style={{ transform: `rotate(calc(360deg / 12 * ${i}))` }} >
                         {/* {console.log(i)} */}
-                        <Link href={`${pages[i]}`}>
+                        <Link href={`${pages[i]}` } >
+                           
                         {hoveredCircle == i ?
                             <div style={{ border: `2px solid ${colors[i]}`, }}
                                 className={classes.outerCircle}
-                                onMouseEnter={() => handleMouseEnter(i)}
-                                onMouseLeave={handleMouseLeave}
+                                onMouseEnter={() =>{ 
+                                    handleMouseEnter(i)
+                                    
+                                }}
+                                onMouseLeave={()=>{
+                                    handleMouseLeave
+                                    
+                                }}
+                                
                             >
                                 <span style={{
                                     backgroundColor: `${colors[i]}`, width: "15px", height: "15px"
