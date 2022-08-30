@@ -59,7 +59,7 @@ function category() {
       </div>
       <div className={classes.model}>
         <Canvas alpha={true}>
-          <ambientLight intensity={0.5} />
+          <ambientLight intensity={1} />
           <pointLight intensity={2} position={[-1, 1, 3]} color="#A5C9CA" />
           <pointLight intensity={2} position={[1, 1, 3]} color="#395B64" />
           <pointLight intensity={2} position={[0, 3, -10]} color="#2C3639" />
