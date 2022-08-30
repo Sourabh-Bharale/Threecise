@@ -15,22 +15,6 @@ export default function Category() {
   const constraintsRef5 = useRef(null);
   const constraintsRef6 = useRef(null);
   const constraintsRef7 = useRef(null);
-  const colors = ['#A500F2', '#FFCF23', '#64D6E2', '#EF9F64', '#9988CD', '#A500F2', '#FFCF23', '#64D6E2', '#EF9F64', '#9988CD'];
-
-  const [index, setIndex] = useState(0)
-
-  const getRandom = () => {
-    return Math.floor(Math.random() * 10);
-  }
-
-  // useEffect(() => {
-  //   setInterval(() => {
-  //     setIndex(getRandom());
-  //   }, 3000);
-  // })
-
-
-
 
   return (
     <div>
@@ -43,15 +27,12 @@ export default function Category() {
       </div>
       <div className={classes.grid}>
         <div className={classes.gridContainer}>
-            <motion.div className={classes.containeri1}>
-              DANCE
-            </motion.div>
-
-          <motion.div className={classes.i2}>EXERCISE</motion.div>
-          <motion.div className={classes.i3} style={{ writingMode: "tb-rl" }}>FUN MOVES</motion.div>
-          <motion.div className={classes.i4} style={{ writingMode: "vertical-lr" }}>HIPHOP</motion.div>
-          <motion.div className={classes.i5}>SQUATS</motion.div>
-          <motion.div className={classes.i6}>THRILLER</motion.div>
+          <Link href="/dance"><motion.div className={classes.containeri1}>DANCE</motion.div></Link>
+          <Link href="/excercises"><motion.div className={classes.i2}>EXERCISE</motion.div></Link>
+          <Link href="/funMoves"><motion.div className={classes.i3} style={{ writingMode: "tb-rl" }}>FUN MOVES</motion.div></Link>
+          <Link href="/hiphop"><motion.div className={classes.i4} style={{ writingMode: "vertical-lr" }}>HIPHOP</motion.div></Link>
+          <Link href="/squats"><motion.div className={classes.i5}>SQUATS</motion.div></Link>
+          <Link href="/thriller"><motion.div className={classes.i6}>THRILLER</motion.div></Link>
 
           <motion.div className={classes.container1} ref={constraintsRef1}>
             <div className={classes.nullContentDiv}>
