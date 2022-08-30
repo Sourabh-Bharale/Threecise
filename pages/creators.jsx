@@ -22,14 +22,11 @@ import { OrbitControls } from "@react-three/drei";
 import { PresentationControls } from "@react-three/drei"
 
 function category() {
-  const actions = ["default"]
-  const actions2 = ["default1"]
   
-  const [action, setAction] = useState("default");
-  const [action2, setAction2] = useState("default1");
-  const [index, setIndex] = useState(0);
-  const [index2, setIndex2] = useState(0);
-
+  
+  const action="default";
+  const action2 = "default1";
+  
   return (
     <div className={classes.createrDiv}>
       <div className={classes.model}>

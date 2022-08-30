@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 // import Button from '../components/Button'
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import classes from "./category.module.css"
