@@ -1,0 +1,27 @@
+
+.hoverDiv{
+    display: none;
+    
+}
+
+.socialDivLink{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.socialDivLink:hover .hoverDiv{
+    display: inline;
+    animation: 6s slide-down;
+    margin-top: 3px;
+    padding-top:0.7rem;
+}
+@keyframes slide-down {
+    from {
+      margin-top: -4%;
+    }
+    to {
+      margin-top: 0%;
+    }
+  }

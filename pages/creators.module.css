@@ -7,9 +7,35 @@
     position: absolute;
     top:0;
     left:0;
-    /* transform: translate(-50%,-50%); */
     z-index: -1;
 }
+
+.closeButtonDiv{
+    padding:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:2rem auto;
+    position: absolute;
+    left:50%;
+    top:1rem;
+    transform: translate(-50%,0);
+    cursor: pointer;
+    z-index: 100;
+}
+
+.button{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    margin:10px;
+    margin-left: 20px;
+}
+
 .model{
     height: 80rem;
     display: flex;
@@ -19,7 +45,7 @@
     display: flex;
     flex-direction: column;
     height: 550px;
-    width: 100px;
+    width: 120px;
     align-items: center;
     justify-content: space-between;
     padding:2rem 1.2rem;
@@ -27,6 +53,7 @@
     z-index: 100;
     top:7rem;
 }
+
 .nameDiv{
     background-color: white;
     width: 200px;
@@ -36,5 +63,5 @@
     justify-content: center;
     border-radius: 20px;
     font-size: 2rem;
-    color: #A500F2;
+    letter-spacing: 0.2rem;
 }

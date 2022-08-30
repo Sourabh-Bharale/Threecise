@@ -1,26 +1,21 @@
 import React, { Suspense, useState } from "react";
 
-import Button from '../components/Button'
 import classes from "./creators.module.css"
 import Link from 'next/link'
 import Image from 'next/image'
-import aryan from '.././public/img/aj.png'
-import aryanSign from '.././public/img/Aryan Jangid.svg'
-import sourabhSign from '.././public/img/Sourabh Bharale.svg'
-import linkimg from '.././public/img/link.svg'
-import insta from '.././public/img/insta.svg'
-import linked from '.././public/img/linked.svg'
-import git from '.././public/img/git.svg'
-import web from '.././public/img/web.png'
+import insta from '../public/img/insta.svg'
+import linked from '../public/img/linked.svg'
+import git from '../public/img/git.svg'
+import web from '../public/img/web.png'
 import background from '.././public/img/create back.jpg'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 import { CreatorSourabh } from '../components/Models/Sourabh'
 import { CreatorAryan } from '../components/Models/Aryan'
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
 import { PresentationControls } from "@react-three/drei"
+import SocialButton from "../components/SocialButton";
 
 function category() {
 
@@ -30,43 +25,37 @@ function category() {
 
   return (
     <div >
-      <div className={classes.socialDiv} style={{
-      left:"7rem",
-      backgroundColor: "#A500F2"}}>
-        <div>
-          <Image src={web}></Image>
-        </div>
-        <div>
-          <Image src={insta}></Image>
-        </div>
-        <div className={classes.nameDiv} style={{color:"#A500F2"}}>
-            <h1>SOURABH</h1>
-        </div>
-        <div>
-          <Image src={linked}></Image>
-        </div>
-        <div>
-          <Image src={git}></Image>
-        </div>
+      <div className={classes.closeButtonDiv}>
+        <Link href="/">
+          <div className={classes.button} style={{ border: `0.3rem solid white`, }}>
+            <FontAwesomeIcon className={classes.icon} icon={faHome} color="red" size="2x" />
+          </div>
+        </Link>
       </div>
-      <div className={classes.socialDiv} style={{top:"7rem",
-      right:"7rem",
-      backgroundColor: "#EE3939"}}>
-        <div>
-          <Image src={web}></Image>
+      <div className={classes.socialDiv} style={{
+        left: "7rem",
+        backgroundColor: "#A500F2"
+      }}>
+        <SocialButton icon={web} id="sourahb_bharale"></SocialButton>
+        <SocialButton icon={git} id="sourahb_bharale"></SocialButton>
+        <div className={classes.nameDiv} style={{ color: "#A500F2" }}>
+          <h1>SOURABH</h1>
         </div>
-        <div>
-          <Image src={insta}></Image>
+        <SocialButton icon={linked} id="sourahb_bharale"></SocialButton>
+        <SocialButton icon={insta} id="sourahb_bharale"></SocialButton>
+      </div>
+      <div className={classes.socialDiv} style={{
+        top: "7rem",
+        right: "7rem",
+        backgroundColor: "#EE3939", 
+      }}>
+        <SocialButton icon={web} id="sourahb_bharale"></SocialButton>
+        <SocialButton icon={git} id="sourahb_bharale"></SocialButton>
+        <div className={classes.nameDiv} style={{ color: "#EE3939" }}>
+          <h1>ARYAN</h1>
         </div>
-        <div className={classes.nameDiv} style={{color:"#EE3939"}}>
-            <h1>ARYAN</h1>
-        </div>
-        <div>
-          <Image src={linked}></Image>
-        </div>
-        <div>
-          <Image src={git}></Image>
-        </div>
+        <SocialButton icon={linked} id="sourahb_bharale"></SocialButton>
+        <SocialButton icon={insta} id="sourahb_bharale"></SocialButton>
       </div>
       <div className={classes.model}>
         <Canvas alpha={true}>

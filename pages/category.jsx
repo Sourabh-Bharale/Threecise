@@ -1,8 +1,8 @@
 import React from 'react'
 // import Button from '../components/Button'
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import classes from "./category.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import classes from "./category.module.css"
 import Link from 'next/link';
 import { useRef } from "react";
 import { motion } from "framer-motion";

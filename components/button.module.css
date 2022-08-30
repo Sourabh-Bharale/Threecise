@@ -39,7 +39,6 @@
 .button:hover .hoverDiv, .buttonDiv:hover .hoverDiv{
   display: inline;
   animation: 0.6s slide-right;
-  
 }
 
 
