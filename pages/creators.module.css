@@ -14,3 +14,27 @@
     height: 80rem;
     display: flex;
 }
+.socialDiv{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    width: 100px;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 1.2rem;
+    border-radius: 20px;
+    z-index: 100;
+    top:7rem;
+}
+.nameDiv{
+    background-color: white;
+    width: 200px;
+    padding:1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 2rem;
+    color: #A500F2;
+}
