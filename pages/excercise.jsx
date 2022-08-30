@@ -6,6 +6,7 @@ import CanvasScreen from '../components/CanvasScreen'
 import classes from "./dance.module.css"
 import Button from "../components/Button";
 import { faArrowUp, faArrowDown} from '@fortawesome/free-solid-svg-icons';
+import useSound from 'use-sound';
 
 export default function Thriller() {
     const actions = ["idle","Bicep Curl","Front Raises","Kettlebell Swing"]
@@ -14,15 +15,23 @@ export default function Thriller() {
 
     const [action, setAction] = useState(actions[0]);
     const [index, setIndex] = useState(0);
+
+
+    const hoverSfx = '/sounds/hover.mp3';
+    const [hoverPlay, { hoverStop }] = useSound(hoverSfx);
     const handlePrevious = () => {
         var l = index - 1;
         if (l == -1) {
             setAction(actions[3]);
             setIndex(3);
+            hoverPlay();
+
         }
         else{
             setAction(actions[l]);
             setIndex(l);
+            hoverPlay();
+
         }
     }
     const handleNext = () => {
@@ -30,10 +39,12 @@ export default function Thriller() {
         if (l == 4) {
             setAction(actions[0]);
             setIndex(0);
+            hoverPlay();
         }
         else{
             setAction(actions[l]);
             setIndex(l);
+            hoverPlay();
         }
     }
 
