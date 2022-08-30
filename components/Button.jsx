@@ -4,15 +4,21 @@ import classes from './button.module.css'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import your icons
+import useSound from 'use-sound';
 
 export default function Button(props) {
 
     const [hoveredCircle, setHoveredCircle] = useState(0);
 
+    const popSFX = '/sounds/pop.mp3';    
+    const [popPlay, { popStop }] = useSound(popSFX);
+
     const handleMouseEnter = () => {
+        popPlay();
         setHoveredCircle(1);
     };
     const handleMouseLeave = () => {
+        popStop;
         setHoveredCircle(0);
     };
 
