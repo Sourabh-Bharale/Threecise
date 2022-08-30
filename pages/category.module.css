@@ -19,9 +19,6 @@
 }
 
 
-.icon{
-    width: 500px;
-}
 
 .grid{
     padding:0 6rem;
@@ -30,18 +27,17 @@
     display: grid;
     grid-template-areas:
       'null header header header menu menu null2 i3'
-      'i4 null3 null3 main main main null4 i3'
+      'i4 null3 null3 null7 null7 null7 null4 i3'
       'i4 null3 null3 i5 i5 null5 null4 i3'
       'i4 null6 null6 null6 null6 xx xx xx';
     gap: 20px;
     padding: 10px;
+    letter-spacing: 0.5rem;
   }
-  .item3{
-  height:140px;}
+  
   
   .gridContainer > div {
     text-align: center;
-    padding: 20px 0;
     font-size: 30px;
     border-radius:20px;
     transition: transform .2s;
@@ -49,16 +45,24 @@
     align-items: center;
     justify-content: center;
   }
-  .gridContainer > div:hover{
-    transform: scale(1.05);
-  }
 
-.i1 { 
-    grid-area: header;
-    background-color: white;
+
+
+/* ///////////////////////////////  Category Div //////////////////////////////////// */
+
+.containeri1{
+    width: auto;
+    height: 100px;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    background: white;
+    border-radius: 30px;
+    position: relative; 
     cursor: pointer;
- }
-
+    grid-area: header;
+}
 .i2 { 
     background-color: white;
     cursor: pointer;
@@ -85,33 +89,161 @@
     cursor: pointer;
     grid-area:xx;
 }
-.null1 { 
-    grid-area: null;
-    background-color: #FFCF23;
 
- }
-.null2 {
-    background-color: #FFCF23;
+
+/* ///////////////////////////////  Null Div //////////////////////////////////// */
+
+
+.container1 {
+    width: auto;
+    height: 100px;
+    grid-area: null;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    cursor: grab;
+    position: relative;
+  }
+  
+  .item1 {
+    width: 100%;
+    height: 100%;
+    background: #FFCF23;
+    border-radius: inherit;
+    /* color:white */
+  }
+  .container2 {
+    /* width: 200px; */
+    /* height: 200px; */
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: grab;
+    border-radius: 30px;
     grid-area:null2;
+  }
+  
+  .item2 {
+    width: 100%;
+    height: 100%;
+    background: #FFCF23;
+    border-radius: inherit;
+    /* color:white */
+  }
+  .container3 {
+    /* width: 200px; */
+    height: 220px;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: grab;
+    border-radius: 30px;grid-area:null3;
+  }
+  
+  .item3 {
+    width: 100%;
+    height: 100%;
+    background: #A500F2;
+    border-radius: inherit;
+    /* color:white */
+  }
+  .container4 {
+    /* width: 200px; */
+    /* height: 200px; */
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: grab;
+    border-radius: 30px;grid-area:null4;
+  }
+  
+  .item4 {
+    width: 100%;
+
+    height: 100%;
+    background: #F83434;
+    border-radius: inherit;
+    /* color:white */
+  }
+  .container5 {
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    cursor: grab;
+    position: relative;grid-area:null5;
+  }
+  
+  .item5 {
+    width: 100%;
+    height: 100%;
+    background: #FFCF23;
+    border-radius: inherit;
+  }
+  .container6 {
+    height: 100px;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    cursor: grab;
+    position: relative;grid-area:null6;
+  }
+  
+  .item6 {
+    width: 100%;
+    height: 100%;
+    background: #64D6E2;
+    border-radius: inherit;
+  }
+  .container7 {
+    height: auto;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: grab;
+    border-radius: 30px;grid-area:null7;
+  }
+  
+  .item7 {
+    width: 100%;
+    height: 100%;
+    background: #64D6E2;
+    border-radius: inherit;
+  }
+
+.icon{
+    width: 500px;
 }
-.null3 {
-    background-color: #FFCF23;
-    grid-area:null3;
+/* ////////////////////////////// Basic Content////////////////////////////////// */
+
+.nullContentDiv{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    color: white;
 }
-.null4 {
-    background-color: #FFCF23;
-    grid-area:null4;
+
+.hintLine{
+    text-align: center;
+    color: white;
+    margin-top: 2rem;
+    letter-spacing: 0.2rem;
 }
-.null5 {
-    background-color: #FFCF23;
-    grid-area:null5;
-}
-.null6 {
-    background-color: #FFCF23;
-    grid-area:null6;
-}
-.null7 {
-    background-color: #FFCF23;
-    grid-area: main;
-    height: 140px;
-     }
