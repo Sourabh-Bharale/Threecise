@@ -50,6 +50,7 @@ export default function Category() {
           </motion.div>
 
           <motion.div className={classes.container4} ref={constraintsRef4}>
+          
             <motion.div className={classes.item4} drag dragConstraints={constraintsRef4}></motion.div>
           </motion.div>
 
@@ -61,6 +62,9 @@ export default function Category() {
           </motion.div>
 
           <motion.div className={classes.container6} ref={constraintsRef6}>
+          <div className={classes.nullContentDiv}>
+              SARTHAK BC
+            </div>
             <motion.div className={classes.item6} drag dragConstraints={constraintsRef6}></motion.div>
           </motion.div>
 
