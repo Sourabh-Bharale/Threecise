@@ -7,6 +7,7 @@ import classes from "./dance.module.css"
 import Button from "../components/Button";
 import { faArrowUp, faArrowDown} from '@fortawesome/free-solid-svg-icons';
 import useSound from 'use-sound';
+import Link from "next/link";
 
 
 export default function Dance() {
@@ -56,9 +57,11 @@ export default function Dance() {
                 <div>
                     <div className={classes.rightButtonDiv}>
                         <div onClick={handlePrevious}><Button href={"xxx"} icons={faArrowUp} color="#413D3D" iconColor="white" text="previous" direction="right" /></div>
+                        <Link href="/journey">
                         <div className={classes.checkCode} style={{color:colors[index]}}>
-                            <h1>Want to check code</h1>
+                            <h1>Our ❤️ Journey</h1>
                         </div>
+                        </Link>
                         <div onClick={handleNext}><Button href={"xxx"} icons={faArrowDown} color="#413D3D" iconColor="white" text="next" direction="right" /></div>
                     </div>
                 </div>
