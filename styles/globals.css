@@ -9,13 +9,28 @@
 html{
   background-color: #1B1B1C;
 }
-
+*{
+  cursor: none;
+}
 
 body {
   padding: 0;
   margin: 0;
   font-family: flyer;
   overflow:hidden;
+}
+
+
+.cursor{
+  background-color: white;
+  height: 32px;
+  width:32px;
+  border-radius: 50%;
+  position: fixed;
+  top:0;
+  left:0; 
+  pointer-events: none;
+  z-index: 1900;
 }
 
 .test{

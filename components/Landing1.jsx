@@ -13,10 +13,52 @@ import triangle3 from '../public/img/triangle3.png'
 import triangle4 from '../public/img/triangle4.png'
 import triangle5 from '../public/img/triangle5.png'
 import './Landing1.module.css';
+import { motion } from "framer-motion";
 import Link from "next/link";
 import useSound from 'use-sound';
 
 export default function Landing1({ index }) {
+
+    const [mousePosition,setMousePosition] =useState({
+        x:0,
+        y:0,
+      });
+    
+      const[cursorVariant,setCursorVariant] = useState("default")
+    
+      useEffect(()=>{
+        const mouseMove=(e)=>{
+          setMousePosition({
+            x:e.clientX,
+            y:e.clientY
+          })
+        }
+        window.addEventListener('mousemove',mouseMove);
+        return()=>{
+          window.removeEventListener('mousemove',mouseMove);
+        }
+      },[])
+    
+    
+      const variants = {
+        default:{
+          x:mousePosition.x-16,
+          y:mousePosition.y-16,
+        },
+        text:{
+          height:80,
+          width:80,
+          x:mousePosition.x-40,
+          y:mousePosition.y-40,
+          backgroundColor: "yellow",
+          mixBlaendMode:"difference"
+    
+        }
+      }
+    
+      const textEnter =()=> setCursorVariant("text");
+      const textLeave =()=> setCursorVariant("default");
+    
 
     const [action, setAction] = useState(10);
     const [c1, setC1] = useState([1, 2, 3, 4, 5, 1, 2, 3, 4, 5])
@@ -70,7 +112,9 @@ export default function Landing1({ index }) {
 
     return (
         <div className={classes.main} >
-
+            <motion.div className="cursor" variants={variants} animate={cursorVariant}>
+        
+        </motion.div>
             <div className={classes.buttonDiv}>
                 <Button href={"/category"} icons={faBars} color="red" iconColor="white" text="Category" direction="left"/>
                 <Button href={"/creators"} icons={faFaceGrinBeam} color="red" iconColor="white" text="About creators" direction="left"/>
@@ -133,7 +177,7 @@ export default function Landing1({ index }) {
               
                 {Array(13).fill(1).map((el, i) =>
                 
-                    <li key={i} style={{ transform: `rotate(calc(360deg / 12 * ${i}))` }} >
+                    <li key={i} style={{ transform: `rotate(calc(360deg / 12 * ${i}))` }}  onMouseEnter={textEnter} onMouseLeave={textLeave}>
                         {/* {console.log(i)} */}
                         <Link href={`${pages[i]}` } >
                            
@@ -146,14 +190,13 @@ export default function Landing1({ index }) {
                                 }}
                                 onMouseLeave={()=>{
                                     handleMouseLeave
-                                    
                                 }}
                                 
                             >
                                 <span style={{
                                     backgroundColor: `${colors[i]}`, width: "15px", height: "15px"
                                 }}
-                                    className={classes.dot}></span>
+                                    className={classes.dot} ></span>
                             </div> :
                             <div style={{ borderColor: `${colors[i]}` }}
                                 className={classes.outerCircle}

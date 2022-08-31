@@ -18,7 +18,7 @@
     margin:2rem auto;
     position: absolute;
     left:50%;
-    top:1rem;
+    top:-2rem;
     transform: translate(-50%,0);
     cursor: pointer;
     z-index: 100;

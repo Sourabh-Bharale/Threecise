@@ -77,7 +77,7 @@
 }
 .outerCircle:hover{
     border: 2px solid;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .xxx{
