@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 // import Button from '../components/Button'
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,6 +8,51 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 
 export default function Category() {
+
+  
+  const [mousePosition,setMousePosition] =useState({
+    x:0,
+    y:0,
+  });
+
+  const[cursorVariant,setCursorVariant] = useState("default")
+
+  useEffect(()=>{
+    const mouseMove=(e)=>{
+      setMousePosition({
+        x:e.clientX,
+        y:e.clientY
+      })
+    }
+    window.addEventListener('mousemove',mouseMove);
+    return()=>{
+      window.removeEventListener('mousemove',mouseMove);
+    }
+  },[])
+
+
+  const variants = {
+    default:{
+      x:mousePosition.x-16,
+      y:mousePosition.y-16,
+    },
+    circle:{
+      height:80,
+      width:80,
+      x:mousePosition.x-40,
+      y:mousePosition.y-40,
+      backgroundColor: "none",
+      mixBlaendMode:"difference",
+      opacity:0
+
+    }
+  }
+
+  const circleEnter =()=> setCursorVariant("circle");
+  const circleLeave =()=> setCursorVariant("default");
+
+
+
   const constraintsRef1 = useRef(null);
   const constraintsRef2 = useRef(null);
   const constraintsRef3 = useRef(null);
@@ -18,6 +63,9 @@ export default function Category() {
 
   return (
     <div>
+      <motion.div className="cursor" variants={variants} animate={cursorVariant}>
+        
+        </motion.div>
       <div className={classes.closeButtonDiv}>
         <Link href="/">
           <div className={classes.button} style={{ border: `0.3rem solid white`, }}>

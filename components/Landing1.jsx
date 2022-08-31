@@ -19,45 +19,6 @@ import useSound from 'use-sound';
 
 export default function Landing1({ index }) {
 
-    const [mousePosition,setMousePosition] =useState({
-        x:0,
-        y:0,
-      });
-    
-      const[cursorVariant,setCursorVariant] = useState("default")
-    
-      useEffect(()=>{
-        const mouseMove=(e)=>{
-          setMousePosition({
-            x:e.clientX,
-            y:e.clientY
-          })
-        }
-        window.addEventListener('mousemove',mouseMove);
-        return()=>{
-          window.removeEventListener('mousemove',mouseMove);
-        }
-      },[])
-    
-    
-      const variants = {
-        default:{
-          x:mousePosition.x-16,
-          y:mousePosition.y-16,
-        },
-        text:{
-          height:80,
-          width:80,
-          x:mousePosition.x-40,
-          y:mousePosition.y-40,
-          backgroundColor: "yellow",
-          mixBlaendMode:"difference"
-    
-        }
-      }
-    
-      const textEnter =()=> setCursorVariant("text");
-      const textLeave =()=> setCursorVariant("default");
     
 
     const [action, setAction] = useState(10);
@@ -93,6 +54,49 @@ export default function Landing1({ index }) {
         setCurrentDance(6);
         setCurrentColor(6);
     };
+
+
+    const [mousePosition,setMousePosition] =useState({
+        x:0,
+        y:0,
+      });
+    
+      const[cursorVariant,setCursorVariant] = useState("default")
+    
+      useEffect(()=>{
+        const mouseMove=(e)=>{
+          setMousePosition({
+            x:e.clientX,
+            y:e.clientY
+          })
+        }
+        window.addEventListener('mousemove',mouseMove);
+        return()=>{
+          window.removeEventListener('mousemove',mouseMove);
+        }
+      },[])
+    
+    
+      const variants = {
+        default:{
+          x:mousePosition.x-16,
+          y:mousePosition.y-16,
+        },
+        circle:{
+          height:80,
+          width:80,
+          x:mousePosition.x-40,
+          y:mousePosition.y-40,
+          backgroundColor: "none",
+          mixBlaendMode:"difference",
+          opacity:0
+    
+        }
+      }
+    
+      const circleEnter =()=> setCursorVariant("circle");
+      const circleLeave =()=> setCursorVariant("default");
+    
 
         // soundeffects
         const hoverSfx = '/sounds/hover.mp3';
@@ -171,13 +175,13 @@ export default function Landing1({ index }) {
                         {dances[currentDance]}
                     </h1>
                     <h4>
-                        become proficient in <span style={{color:"white"}}>{dances[currentDance]}</span>
+                        become proficient in <span style={{color:"white"}} onMouseEnter={circleEnter} onMouseLeave={circleLeave}>{dances[currentDance]}</span>
                     </h4>
                 </div>
               
                 {Array(13).fill(1).map((el, i) =>
                 
-                    <li key={i} style={{ transform: `rotate(calc(360deg / 12 * ${i}))` }}  onMouseEnter={textEnter} onMouseLeave={textLeave}>
+                    <li key={i} style={{ transform: `rotate(calc(360deg / 12 * ${i}))` }}  onMouseEnter={circleEnter} onMouseLeave={circleLeave}>
                         {/* {console.log(i)} */}
                         <Link href={`${pages[i]}` } >
                            
