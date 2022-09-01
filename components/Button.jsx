@@ -11,7 +11,7 @@ export default function Button(props) {
     const [hoveredCircle, setHoveredCircle] = useState(0);
 
     const popSFX = '/sounds/pop.mp3';    
-    const [popPlay, { popStop }] = useSound(popSFX);
+    const [popPlay, { popStop }] = useSound(popSFX,{volume:0.3});
 
     const handleMouseEnter = () => {
         popPlay();
