@@ -1,0 +1,31 @@
+.journeyDiv{
+    text-align: center;
+    color:white;
+    padding: 1rem 4rem;
+}
+
+.closeButtonDiv{
+    padding:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:2rem auto;
+}
+
+.button{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    margin:10px;
+    margin-left: 20px;
+}
+
+.title{
+    font-size: 3rem;
+    color: red;
+    margin-bottom: 2rem;
+}

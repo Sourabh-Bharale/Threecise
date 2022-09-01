@@ -1,0 +1,29 @@
+
+.welcomeDiv{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  .welcomeDiv h1{
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    letter-spacing: 0.1rem;
+  }
+  .welcomeDiv div{
+    border:5px solid red;
+    border-radius: 50px;
+    padding:0.5rem 2rem;
+    font-size: 2rem;
+    transition: 0.5s ease-in-out;
+  }
+  .welcomeDiv div:hover{
+    background-color: red;
+  }
+  .welcomeDiv div:hover .cursor{
+    background-color: white;  
+  }
