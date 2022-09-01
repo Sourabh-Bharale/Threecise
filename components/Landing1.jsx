@@ -184,7 +184,110 @@ export default function Landing1() {
 
     return (
         <>
-            {myWelcome?<Welcome />:<Main />}
+            {myWelcome?<Welcome />:
+            <div className={classes.main} >
+
+                <div className={classes.buttonDiv}>
+                    <Button href={"/category"} icons={faBars} color="red" iconColor="white" text="Category" direction="left" />
+                    <Button href={"/creators"} icons={faFaceGrinBeam} color="red" iconColor="white" text="About creators" direction="left" />
+                </div>
+
+                <div className={classes.backgroundImageDiv}>
+                    <Image src={backima} alt="logo"></Image>
+                </div>
+
+                <div className={classes.xxx} style={{ height: '800px', width: '800px' }}>
+                    {Array(5).fill(1).map((el, i) =>
+                        <>
+                            <li className={classes.backgroundTriangles} key={i} style={{ transform: `rotate(calc(360deg / 5 * ${i}))`, transformOrigin: "400px", opacity: `${opac[i]}` }}>
+                                <Image key={i} src={triangles[c1[i] - 1]} alt="logo"></Image>
+                            </li>
+                        </>
+                    )}
+                </div>
+                <div className={classes.yyy} style={{ height: '900px', width: '900px' }}>
+                    {Array(7).fill(1).map((el, i) =>
+                        <>
+                            <li className={classes.backgroundTriangles} key={i} style={{ transform: `rotate(calc(360deg / 7 * ${i}))`, transformOrigin: "450px", opacity: `${opac[i]}` }}>
+                                <Image key={i} src={triangles[c2[i] - 1]} alt="logo"></Image>
+                            </li>
+                        </>
+                    )}
+                </div>
+                <div className={classes.zzz} style={{ height: '860px', width: '860px' }}>
+                    {Array(8).fill(1).map((el, i) =>
+                        <>
+                            <li className={classes.backgroundTriangles} key={i} style={{ transform: `rotate(calc(360deg / 8 * ${i}))`, transformOrigin: "430px", opacity: `${opac[i]}` }}>
+                                <Image key={i} src={triangles[c3[i] - 1]} alt="logo"></Image>
+                            </li>
+                        </>
+                    )}
+                </div>
+
+                <div className={classes.circleContainer}>
+
+                    <div className={classes.canvasDiv}>
+                        <Canvas alpha={false}>
+                            <ambientLight intensity={0.5} />
+                            <pointLight intensity={2} position={[-1, 1, 3]} color="#2C3333" />
+                            <pointLight intensity={2} position={[1, 1, 3]} color="#395B64" />
+                            <pointLight intensity={2} position={[0, 3, -10]} color="white" />
+                            <OrbitControls enableDamping={true} enableZoom={true} />
+                            <Suspense fallback={null}>
+                                <HomePageMoves action={action} />
+                            </Suspense>
+                        </Canvas>
+                    </div>
+                    <div className={classes.contentDiv}>
+                        <h1 style={{ color: `${colors[currentColor]}` }}>
+                            {dances[currentDance]}
+                        </h1>
+                        <h4>
+                            become proficient in <span style={{ color: "white" }} >{dances[currentDance]}</span>
+                        </h4>
+                    </div>
+
+                    {Array(13).fill(1).map((el, i) =>
+
+                        <li key={i} style={{ transform: `rotate(calc(360deg / 12 * ${i}))` }}>
+                            {/* {console.log(i)} */}
+                            <Link href={`${pages[i]}`} >
+
+                                {hoveredCircle == i ?
+                                    <div style={{ border: `2px solid ${colors[i]}`, }}
+                                        className={classes.outerCircle}
+                                        onMouseEnter={() => {
+                                            handleMouseEnter(i)
+
+                                        }}
+                                        onMouseLeave={() => {
+                                            handleMouseLeave
+                                        }}
+
+                                    >
+                                        <span style={{
+                                            backgroundColor: `${colors[i]}`, width: "15px", height: "15px"
+                                        }}
+                                            className={classes.dot} ></span>
+                                    </div> :
+                                    <div style={{ borderColor: `${colors[i]}` }}
+                                        className={classes.outerCircle}
+                                        onMouseEnter={() => handleMouseEnter(i)}
+                                        onMouseLeave={handleMouseLeave}
+                                    >
+                                        <span style={{
+                                            backgroundColor: "white"
+                                        }}
+                                            className={classes.dot}></span>
+                                    </div>
+                                }
+                            </Link>
+                        </li>
+                    )}
+
+                </div>
+            </div>
+            }
         </>
     )
 }
