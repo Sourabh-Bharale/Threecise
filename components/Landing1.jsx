@@ -110,7 +110,7 @@ export default function Landing1() {
             {myWelcome ?
                 <div className="welcomeDiv">
                     <h1 onMouseEnter={circleEnter} onMouseLeave={circleLeave}>Let's get started</h1>
-                    <div onClick={() => { changeWelcome(); setMyWelcome(false) }} onMouseEnter={circleEnter} onMouseLeave={circleLeave}>EXPLORE</div>
+                    <div onClick={() => { changeWelcome(); setMyWelcome(false); circleLeave() }} onMouseEnter={circleEnter} onMouseLeave={circleLeave}>EXPLORE</div>
                 </div>
                 :
                 <div className={classes.main} >
