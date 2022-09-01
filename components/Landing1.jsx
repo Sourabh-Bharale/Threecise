@@ -15,22 +15,65 @@ import triangle5 from '../public/img/triangle5.png'
 import './Landing1.module.css';
 import Link from "next/link";
 import useSound from 'use-sound';
-import { welcome, changeWelcome, colors, dances, pages , backgroundCircles ,c1,c2,c3,opac } from "../pages/store";
+import { welcome, changeWelcome, colors, dances, pages, backgroundCircles, c1, c2, c3, opac, mousePositionX, mousePositionY, setMousePosition } from "../pages/store";
+import { motion } from "framer-motion";
 
 export default function Landing1() {
 
-    const [myWelcome, setMyWelcome] = useState(welcome)
-
-    const [action, setAction] = useState(10);
-
-
-
     const triangles = [triangle1, triangle2, triangle3, triangle4, triangle5];
-
-
+    const [myWelcome, setMyWelcome] = useState(welcome)
+    const [action, setAction] = useState(10);
     const [hoveredCircle, setHoveredCircle] = useState(6);
     const [currentDance, setCurrentDance] = useState(6);
     const [currentColor, setCurrentColor] = useState(6);
+
+
+
+    const [mousePosition, setMouse] = useState({
+        x: mousePositionX,
+        y: mousePositionY,
+    });
+
+
+    const [cursorVariant, setCursorVariant] = useState("default")
+
+    useEffect(() => {
+
+        const mouseMove = (e) => {
+            // setMousePosition(e.clientX,e.clientY)
+            setMouse({
+                x: e.clientX,
+                y: e.clientY
+            })
+        }
+
+        window.addEventListener('mousemove', mouseMove);
+        return () => {
+            window.removeEventListener('mousemove', mouseMove);
+        }
+    }, [])
+
+
+    const variants = {
+        default: {
+            x: mousePosition.x - 16,
+            y: mousePosition.y - 16,
+        },
+        circle: {
+            height: 80,
+            width: 80,
+            x: mousePosition.x - 40,
+            y: mousePosition.y - 40,
+            backgroundColor: "white",
+            mixBlendMode: "difference",
+            opacity: 1
+
+        }
+    }
+
+    const circleEnter = () => setCursorVariant("circle");
+    const circleLeave = () => setCursorVariant("default");
+
 
 
     const handleMouseEnter = (i) => {
@@ -56,24 +99,27 @@ export default function Landing1() {
     const pageChangeSFX = '/sounds/pageLoad.mp3'
     const [pageChange] = useSound(pageChangeSFX)
 
-    const Welcome = () => {
-        return (
-            <div className="welcomeDiv">
-                <h1 >Let's get started</h1>
-                <div onClick={() => { changeWelcome(); setMyWelcome(false) }} >EXPLORE</div>
-                <h1>{welcome}</h1>
-            </div>
-        )
-    }
+
 
 
     return (
         <>
-            {myWelcome ? <Welcome /> :
+            <motion.div className="cursor" variants={variants} animate={cursorVariant}>
+
+            </motion.div>
+            {myWelcome ?
+                <div className="welcomeDiv">
+                    <h1 onMouseEnter={circleEnter} onMouseLeave={circleLeave}>Let's get started</h1>
+                    <div onClick={() => { changeWelcome(); setMyWelcome(false) }} onMouseEnter={circleEnter} onMouseLeave={circleLeave}>EXPLORE</div>
+                </div>
+                :
                 <div className={classes.main} >
 
                     <div className={classes.buttonDiv}>
-                        <Button href={"/category"} icons={faBars} color="red" iconColor="white" text="Category" direction="left" />
+                        <div onClick={() => setMousePosition(mousePosition.x, mousePosition.y)}>
+                            <Button href={"/category"} icons={faBars} color="red" iconColor="white" text="Category" direction="left" />
+
+                        </div>
                         <Button href={"/creators"} icons={faFaceGrinBeam} color="red" iconColor="white" text="About creators" direction="left" />
                     </div>
 
@@ -96,7 +142,7 @@ export default function Landing1() {
                         const nums = circleIndex.numberOfItems;
                         const diameter = circleIndex.height;
                         const origin = diameter / 2;
-                        const returnClassName=(index)=>{
+                        const returnClassName = (index) => {
                             if (index === 1) {
                                 return classes.xxx
                             }
@@ -137,6 +183,7 @@ export default function Landing1() {
                                 </Suspense>
                             </Canvas>
                         </div>
+
                         <div className={classes.contentDiv}>
                             <h1 style={{ color: `${colors[currentColor]}` }}>
                                 {dances[currentDance]}

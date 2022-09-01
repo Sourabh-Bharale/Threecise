@@ -27,8 +27,8 @@ body {
   width:32px;
   border-radius: 50%;
   position: fixed;
-  top:0;
-  left:0; 
+  top:-10;
+  left:-10; 
   pointer-events: none;
   z-index: 1900;
 }
