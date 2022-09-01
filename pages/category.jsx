@@ -6,52 +6,53 @@ import classes from "./category.module.css"
 import Link from 'next/link';
 import { useRef } from "react";
 import { motion } from "framer-motion";
+import { mousePositionX, mousePositionY,setMousePosition } from './store';
 
 export default function Category() {
 
-  
-  const [mousePosition,setMousePosition] =useState({
-    x:0,
-    y:0,
-  });
+    
+    const [mousePosition,setMouse] =useState({
+      x:mousePositionX,
+      y:mousePositionY,
+    });
 
-  const[cursorVariant,setCursorVariant] = useState("default")
+    const[cursorVariant,setCursorVariant] = useState("default")
 
-  useEffect(()=>{
-    const mouseMove=(e)=>{
-      setMousePosition({
-        x:e.clientX,
-        y:e.clientY
-      })
+    useEffect(()=>{
+      const mouseMove=(e)=>{
+        setMouse({
+          x:e.clientX,
+          y:e.clientY
+        })
+      }
+      window.addEventListener('mousemove',mouseMove);
+      return()=>{
+        window.removeEventListener('mousemove',mouseMove);
+      }
+    },[])
+
+
+    const variants = {
+      default:{
+        x:mousePosition.x-16,
+        y:mousePosition.y-16,
+      },
+      circle:{
+        height:80,
+        width:80,
+        x:mousePosition.x-40,
+        y:mousePosition.y-40,
+        backgroundColor: "none",
+        mixBlendMode:"difference",
+        opacity:0
+      }
     }
-    window.addEventListener('mousemove',mouseMove);
-    return()=>{
-      window.removeEventListener('mousemove',mouseMove);
-    }
-  },[])
 
+    const circleEnter =()=> setCursorVariant("circle");
+    const circleLeave =()=> setCursorVariant("default");
 
-  const variants = {
-    default:{
-      x:mousePosition.x-16,
-      y:mousePosition.y-16,
-    },
-    circle:{
-      height:80,
-      width:80,
-      x:mousePosition.x-40,
-      y:mousePosition.y-40,
-      backgroundColor: "none",
-      mixBlaendMode:"difference",
-      opacity:0
-
-    }
-  }
-
-  const circleEnter =()=> setCursorVariant("circle");
-  const circleLeave =()=> setCursorVariant("default");
-
-
+    console.log(mousePositionX);
+    console.log(mousePositionY);
 
   const constraintsRef1 = useRef(null);
   const constraintsRef2 = useRef(null);
@@ -66,8 +67,8 @@ export default function Category() {
       <motion.div className="cursor" variants={variants} animate={cursorVariant}>
         
         </motion.div>
-      <div className={classes.closeButtonDiv}>
-        <Link href="/">
+      <div className={classes.closeButtonDiv} onClick={()=>setMousePosition(mousePosition.x, mousePosition.y)}>
+        <Link href="/" >
           <div className={classes.button} style={{ border: `0.3rem solid white`, }}>
             <FontAwesomeIcon className={classes.icon} icon={faXmark} color="red" size="2x" />
           </div>
