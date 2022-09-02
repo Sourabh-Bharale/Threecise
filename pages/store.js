@@ -34,3 +34,31 @@ export const setMousePosition = (x, y) => {
     mousePositionX = x;
     mousePositionY = y;
 }
+
+
+const actions = ["idle", "Belly Dance", "Shopping Cart ", "Break Dance1", "Dance Tweark", "Flair", "Gagnam Style", "House Dance", "Silly", "Soul Spin Combo"]
+
+export let currentDance = 0;
+export const nextDance=(index)=>{
+    console.log(index);
+
+    var l = index + 1;
+    if (l == 10) {
+        currentDance = 0
+
+    }
+    else{
+        currentDance = l
+    }
+}
+export const previousDance=(index)=>{
+    console.log(index);
+    var l = index - 1;
+    if (l == -1) {
+        currentDance = 9
+
+    }
+    else{
+        currentDance = l
+    }
+}

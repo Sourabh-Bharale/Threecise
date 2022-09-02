@@ -1,19 +1,17 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import DanceoffVro from "../components/Models/danceoff"
 import CanvasScreen from '../components/CanvasScreen'
 import classes from "./dance.module.css"
 import Button from "../components/Button";
-import { faArrowUp, faArrowDown} from '@fortawesome/free-solid-svg-icons';
+import { faArrowUp, faArrowDown, faStar} from '@fortawesome/free-solid-svg-icons';
 import useSound from 'use-sound';
-import Link from "next/link";
-
+import { colors, mousePositionX, mousePositionY } from "./store";
 
 export default function Dance() {
     const actions = ["idle", "Belly Dance", "Shopping Cart ", "Break Dance1", "Dance Tweark", "Flair", "Gagnam Style", "House Dance", "Silly", "Soul Spin Combo"]
-    const colors = ['#A500F2', '#FFCF23', '#64D6E2', '#EF9F64', '#9988CD', '#A500F2', '#FFCF23', '#64D6E2', '#EF9F64', '#9988CD'];
-
+ 
     const [action, setAction] = useState(actions[1]);
     const [index, setIndex] = useState(1);
 
@@ -51,19 +49,71 @@ export default function Dance() {
         }
     }
 
+    
+
+    const [mousePosition, setMouse] = useState({
+        x: mousePositionX,
+        y: mousePositionY,
+    });
+
+
+    const [cursorVariant, setCursorVariant] = useState("default")
+
+    useEffect(() => {
+
+        const mouseMove = (e) => {
+            // setMousePosition(e.clientX,e.clientY)
+            setMouse({
+                x: e.clientX,
+                y: e.clientY
+            })
+        }
+
+        window.addEventListener('mousemove', mouseMove);
+        return () => {
+            window.removeEventListener('mousemove', mouseMove);
+        }
+    }, [])
+
+
+    const variants = {
+        default: {
+            x: mousePosition.x - 16,
+            y: mousePosition.y - 16,
+        },
+        text: {
+            height: 80,
+            width: 80,
+            x: mousePosition.x - 40,
+            y: mousePosition.y - 40,
+            backgroundColor: "white",
+            mixBlendMode: "difference",
+            opacity: 1
+        },
+        button: {
+            height: 80,
+            width: 80,
+            x: mousePosition.x - 40,
+            y: mousePosition.y - 40,
+            backgroundColor: `${colors[index]}`,
+            mixBlendMode: "difference",
+            opacity: 1
+        },
+    }
+
+    const buttonEnter = () => setCursorVariant("button");
+    const buttonLeave = () => setCursorVariant("default");
+    const textEnter =()=> setCursorVariant("text");
+    const textLeave =()=> setCursorVariant("default");
+
+
     return (
         <div>
+            <CanvasScreen titleName={actions[index]} index={index+1} backgroundColor={colors[index]} category="Dance" />
             <div className={classes.outerDiv}>
                 <div>
-                    <div className={classes.rightButtonDiv}>
-                        <div onClick={handlePrevious}><Button href={"xxx"} icons={faArrowUp} color="#413D3D" iconColor="white" text="previous" direction="right" /></div>
-                        <Link href="/journey">
-                        <div className={classes.checkCode} style={{color:colors[index]}}>
-                            <h1>Our ❤️ Journey</h1>
-                        </div>
-                        </Link>
-                        <div onClick={handleNext}><Button href={"xxx"} icons={faArrowDown} color="#413D3D" iconColor="white" text="next" direction="right" /></div>
-                    </div>
+
+                    
                 </div>
                 <Canvas alpha={true}>
                     <ambientLight intensity={0.5} />
@@ -76,8 +126,6 @@ export default function Dance() {
                     </Suspense>
                 </Canvas>
             </div>
-            <CanvasScreen titleName={actions[index]} index={index+1} backgroundColor={colors[index]} category="Dance" />
-
 
         </div>
     )

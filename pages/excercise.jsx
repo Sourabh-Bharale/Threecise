@@ -5,7 +5,7 @@ import EMode1 from "../components/Models/excercise1";
 import CanvasScreen from '../components/CanvasScreen'
 import classes from "./dance.module.css"
 import Button from "../components/Button";
-import { faArrowUp, faArrowDown} from '@fortawesome/free-solid-svg-icons';
+import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import useSound from 'use-sound';
 
 export default function Thriller() {
@@ -71,7 +71,7 @@ export default function Thriller() {
                     </Suspense>
                 </Canvas>
             </div>
-            <CanvasScreen titleName={actions[index]} index={index+1} backgroundColor={colors[index]} category="Dance" />
+            <CanvasScreen titleName={actions[index]} index={index+1} backgroundColor={colors[index]} category="Exercise" />
 
 
         </div>

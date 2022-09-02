@@ -22,10 +22,12 @@ export default function Button(props) {
         setHoveredCircle(0);
     };
 
+    
+
     return (
         <div className={classes.buttonDiv} style={{ flexDirection: `${props.direction == "left" ? "row" : "row-reverse"}`, animation: `${props.direction == "left" ? "0.6s slide-right" : "0.6s slide-left"}` }}>
             {props.href === "xxx" ?
-                <div className={classes.button} style={{ border: `0.3rem solid ${props.color}` }}
+                <div className={classes.button} style={{ border: `0.3rem solid ${props.color}` , backgroundColor: `${props.backgroundColor}`}}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}>
                     {hoveredCircle == 1 ?

@@ -67,7 +67,7 @@ export default function Category() {
       <motion.div className="cursor" variants={variants} animate={cursorVariant}>
         
         </motion.div>
-      <div className={classes.closeButtonDiv} onClick={()=>setMousePosition(mousePosition.x, mousePosition.y)}>
+      <div className={classes.closeButtonDiv} >
         <Link href="/" >
           <div className={classes.button} style={{ border: `0.3rem solid white`, }}>
             <FontAwesomeIcon className={classes.icon} icon={faXmark} color="red" size="2x" />

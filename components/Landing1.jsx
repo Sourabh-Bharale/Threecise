@@ -73,7 +73,16 @@ export default function Landing1() {
             width: 80,
             x: mousePosition.x - 40,
             y: mousePosition.y - 40,
-            backgroundColor: "black",
+            backgroundColor: "red",
+            mixBlendMode: "difference",
+            opacity: 1
+        },
+        hover: {
+            height: 80,
+            width: 80,
+            x: mousePosition.x - 40,
+            y: mousePosition.y - 40,
+            backgroundColor: `${colors[hoveredCircle]}`,
             mixBlendMode: "difference",
             opacity: 1
         }
@@ -83,7 +92,8 @@ export default function Landing1() {
     const buttonLeave = () => setCursorVariant("default");
     const textEnter =()=> setCursorVariant("text");
     const textLeave =()=> setCursorVariant("default");
-
+    const hoverEnter = () => setCursorVariant("hover");
+    const hoverLeave = () => setCursorVariant("default");
 
 
     const handleMouseEnter = (i) => {
@@ -115,7 +125,7 @@ export default function Landing1() {
 
             </motion.div>
             {myWelcome ?
-                <div className="welcomeDiv">
+                <div className="welcomeDiv">    
                     <h1 onMouseEnter={textEnter} onMouseLeave={textLeave}>Let's get started</h1>
                     <div onClick={() => { changeWelcome(); setMyWelcome(false); buttonLeave()}} onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}>EXPLORE</div>
                 </div>
@@ -205,7 +215,7 @@ export default function Landing1() {
 
                         {Array(13).fill(1).map((el, i) =>
 
-                            <li key={i} style={{ transform: `rotate(calc(360deg / 12 * ${i}))` }} onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}>
+                            <li key={i} style={{ transform: `rotate(calc(360deg / 12 * ${i}))` }} onMouseEnter={hoverEnter} onMouseLeave={hoverLeave}>
                                 <Link href={`${pages[i]}`} >
 
                                     {hoveredCircle == i ?
