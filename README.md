@@ -78,29 +78,30 @@ zoom in / out to properly focus 🧐 on a particular body movement of the excerc
 ---
 
 <div align="center">
-  ![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
-<img  src = "./readme_assets/mockup_main.png">
-  </div>
+    <img  src = "./readme_assets/main.gif">
+ </div>
 
 ---
 <table>
   <tr>
-    <td><img width="500px" src = "./readme_assets/create_account.png"></td>
-    <td><img width="500px" src = "./readme_assets/log_in.png"></td>
+    <td><img width="500px" src = "./readme_assets/start.png"></td>
+    <td><img width="500px" src = "./readme_assets/crunches.gif"></td>
   </tr>
   <tr>
-    <td><img width="500px" src = "./readme_assets/featured_products.png"></td>
-    <td><img width="500px" src = "./readme_assets/retailer_profile.png"></td>
+    <td><img width="500px" src = "./readme_assets/gagnamStyle.png"></td>
+    <td><img width="500px" src = "./readme_assets/categories.png"></td>
   </tr>
   <tr>
-    <td><img width="500px" src = "./readme_assets/verify_warranty.png"></td>
-    <td><img width="500px" src = "./readme_assets/product_page.png"></td>
-  </tr>
-  <tr>
-    <td><img width="500px" src = "./readme_assets/customer_profile.png"></td>
-    <td><img width="500px" src = "./readme_assets/popup.png"></td>
+    <td><img width="500px" src = "./readme_assets/hiphop.gif"></td>
+    <td><img width="500px" src = "./readme_assets/gagnamStyle.gif"></td>
   </tr>
 </table>
+
+---
+
+<div align="center">
+    <img  src = "./readme_assets/creators.gif">
+ </div>
 
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
