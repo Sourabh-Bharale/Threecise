@@ -1,6 +1,8 @@
 
 .hoverDiv{
     display: none;
+    justify-items: center;
+    text-align: center;
     
 }
 

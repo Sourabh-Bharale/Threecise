@@ -36,26 +36,28 @@ function category() {
         left: "7rem",
         backgroundColor: "#A500F2"
       }}>
-        <SocialButton icon={web} id="sourahb_bharale"></SocialButton>
-        <SocialButton icon={git} id="sourahb_bharale"></SocialButton>
+        
+        <SocialButton icon={web} id="cooking something for ya" ></SocialButton>
+        <SocialButton icon={git} id="Sourabh-Bharale" goto='https://github.com/Sourabh-Bharale'></SocialButton>
         <div className={classes.nameDiv} style={{ color: "#A500F2" }}>
           <h1>SOURABH</h1>
         </div>
-        <SocialButton icon={linked} id="sourahb_bharale"></SocialButton>
-        <SocialButton icon={insta} id="sourahb_bharale"></SocialButton>
-      </div>
+        <SocialButton icon={linked} id="Sourabh Bharale" goto='https://www.linkedin.com/in/sourabh-bharale-a9365821a/'></SocialButton>
+        <SocialButton icon={insta} id="_s0ur48h_" goto='https://www.instagram.com/_s0ur48h_/'></SocialButton>
+        </div>
+      
       <div className={classes.socialDiv} style={{
         top: "7rem",
         right: "7rem",
         backgroundColor: "#EE3939", 
       }}>
-        <SocialButton icon={web} id="sourahb_bharale"></SocialButton>
-        <SocialButton icon={git} id="sourahb_bharale"></SocialButton>
+        <SocialButton icon={web} id="aryanjangid.in" goto='https://www.aryanjangid.in/'></SocialButton>
+        <SocialButton icon={git} id="aryanjangid" goto='https://github.com/aryanjangid'></SocialButton>
         <div className={classes.nameDiv} style={{ color: "#EE3939" }}>
           <h1>ARYAN</h1>
         </div>
-        <SocialButton icon={linked} id="sourahb_bharale"></SocialButton>
-        <SocialButton icon={insta} id="sourahb_bharale"></SocialButton>
+        <SocialButton icon={linked} id="Aryan Jangid" goto='https://www.linkedin.com/in/jangidaryan/'></SocialButton>
+        <SocialButton icon={insta} id="aj_aryan0007" goto='https://www.instagram.com/aj_aryan0007/'></SocialButton>
       </div>
       <div className={classes.model}>
         <Canvas alpha={true}>
