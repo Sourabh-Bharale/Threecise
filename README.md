@@ -79,18 +79,18 @@ zoom in / out to properly focus 🧐 on a particular body movement of the excerc
  </div>
 
 ---
-<table>
+<table align="center">
   <tr>
-    <td><img width="350px" src = "./readme_assets/start.png"></td>
-    <td><img width="350px" src = "./readme_assets/crunches.gif"></td>
+    <td><img width="400px" src = "./readme_assets/start.png"></td>
+    <td><img width="400px" src = "./readme_assets/crunches.gif"></td>
   </tr>
   <tr>
-    <td><img width="350px" src = "./readme_assets/gagnamStyle.png"></td>
-    <td><img width="350px" src = "./readme_assets/categories.png"></td>
+    <td><img width="400px" src = "./readme_assets/gagnamStyle.png"></td>
+    <td><img width="400px" src = "./readme_assets/categories.png"></td>
   </tr>
   <tr>
-    <td><img width="350px" src = "./readme_assets/hiphop.gif"></td>
-    <td><img width="350px" src = "./readme_assets/gagnamStyle.gif"></td>
+    <td><img width="400px" src = "./readme_assets/hiphop.gif"></td>
+    <td><img width="400px" src = "./readme_assets/gagnamStyle.gif"></td>
   </tr>
 </table>
 
