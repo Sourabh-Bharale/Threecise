@@ -49,9 +49,10 @@ zoom in / out to properly focus 🧐 on a particular body movement of the excerc
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#project-gallery">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#project-gallery">Project Gallery</a></li>
+        <li><a href="#tech-stack">Tech Stack</a></li>
       </ul>
     </li>
     <li>
@@ -61,8 +62,7 @@ zoom in / out to properly focus 🧐 on a particular body movement of the excerc
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#resources-used-throughout-the-journey">Resources</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -73,7 +73,7 @@ zoom in / out to properly focus 🧐 on a particular body movement of the excerc
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Project Gallery
 
 ---
 
@@ -99,88 +99,93 @@ zoom in / out to properly focus 🧐 on a particular body movement of the excerc
 
 ---
 
-<div align="center">
-    <img  src = "./readme_assets/creators.gif">
- </div>
 
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
+
+### Tech stack
+
+* <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white">
+* <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white">
+* <img src="https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white">
+* ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-### Built With
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+---
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Instructions on setting up your project locally.
+To get a local copy up and running follow these simple steps.
+
+---
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+list things you need to use the software and how to install them.
+
+---
+
 * npm
   ```sh
   npm install npm@latest -g
   ```
 
+---
+
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo into your desired directory
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/Sourabh-Bharale/fitnessThreejs.git
    ```
-3. Install NPM packages
+2. Install dependencies (only the first time)
    ```sh
-   npm install
+   npm i
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+3. Run the local server at localhost:3000
+   ```sh
+   npm run dev
    ```
-
+   
+    Now you are good to go 🚀
+   
+ ---
+    
+   Build for production in the dist/ directory
+   ```sh
+   npm run build
+   ```
+   start your optimized build at localhost:3000
+   ```sh
+   npm run start
+   ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Resources used throughout the journey
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Implementing this project was not a peice of cake...😨...faced many difficulties also experienced lack of resources on the web to do the same 😖
+creating modals🤖 was some what a easy task... finding animations was somewhat time consuming ⌛ but making the animations work on a single modal was a real problem + even more troublesome as 😢 and yet still here we are🥂🤩
+below are some resources we found useful during our journey 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+---
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<ul>
+  <li><a href="https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene">React-three</a></li>
+  <li><a href="https://docs.pmnd.rs/react-three-fiber/getting-started/introduction">React-three</a></li>
+  <li><a href="https://www.blender.org/">blender</a></li>
+  <li><a href="https://www.mixamo.com/#/">Animations</a></li>      
+</ul>
+
+_For more examples, please refer to the [threeJS](https://threejs.org/)_
+
+---
 
 
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -200,7 +205,7 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+---
 
 <!-- LICENSE -->
 ## License
@@ -212,8 +217,12 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 <!-- CONTACT -->
-## Contact
+## Creators
 
+<div align="center">
+    <img  src = "./readme_assets/creators.gif">
+ </div>
+ 
 Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
 
 Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
