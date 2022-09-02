@@ -37,12 +37,14 @@ zoom in / out to properly focus 🧐 on a particular body movement of the excerc
     .
     <a href="https://github.com/Sourabh-Bharale/fitnessThreejs/issues">Request Feature</a>
   </p>
+  <strong>Like the project ( UwU ) ?? we would appreciate if you give this repo a star⭐</strong>
 </div>
 
 
 
+
 <!-- TABLE OF CONTENTS -->
-<details>
+<h2><strong><details>
   <summary>Table of Contents</summary>
   <ol>
     <li>
@@ -63,7 +65,7 @@ zoom in / out to properly focus 🧐 on a particular body movement of the excerc
     <li><a href="#contributing">contributing</a></li>
     <li><a href="#creators">meet the creators</a></li>
   </ol>
-</details>
+</details></strong></h2>
 
 
 
@@ -104,7 +106,7 @@ zoom in / out to properly focus 🧐 on a particular body movement of the excerc
 * <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white">
 * <img src="https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white">
 * ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ---
 
@@ -156,7 +158,7 @@ list things you need to use the software and how to install them.
    ```sh
    npm run start
    ```
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 
@@ -198,7 +200,6 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
 
