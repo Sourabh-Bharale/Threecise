@@ -7,7 +7,7 @@ import classes from "./dance.module.css"
 import Button from "../components/Button";
 import { faArrowUp, faArrowDown, faStar} from '@fortawesome/free-solid-svg-icons';
 import useSound from 'use-sound';
-import { colors, mousePositionX, mousePositionY } from "./store";
+import { colors, mousePositionX, mousePositionY } from "../components/store";
 
 export default function Dance() {
     const actions = ["idle", "Belly Dance", "Shopping Cart ", "Break Dance1", "Dance Tweark", "Flair", "Gagnam Style", "House Dance", "Silly", "Soul Spin Combo"]

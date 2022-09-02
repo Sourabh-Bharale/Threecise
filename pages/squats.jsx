@@ -7,7 +7,7 @@ import classes from "./dance.module.css"
 import Button from "../components/Button";
 import { faArrowUp, faArrowDown, faStar} from '@fortawesome/free-solid-svg-icons';
 import useSound from 'use-sound';
-import { colors } from "./store";
+import { colors } from "../components/store";
 
 export default function Dance() {
     const actions = ["idle","Air Squats","Air Squats Bent Arms","Back Squats End","Back Squats Mid","Back Squats Start","Overhead Squats End","Overhead Squats Mid","Overhead Squats Start"]
@@ -52,7 +52,7 @@ export default function Dance() {
                     <div className={classes.rightButtonDiv}>
                         <div onClick={handlePrevious}><Button href={"xxx"} icons={faArrowUp} color="#413D3D" iconColor="white" text="previous" direction="right" /></div>
                         <div >
-                            <a href="https://github.com/Sourabh-Bharale/Threecise" target="_blank"><Button backgroundColor="#413D3D" href={"xxx"} icons={faStar} color="#413D3D" iconColor="yellow" text="Leave a star on Github" direction="right" /></a>
+                            <a href="https://github.com/Sourabh-Bharale/Threecise" rel="noreferrer" target="_blank"><Button backgroundColor="#413D3D" href={"xxx"} icons={faStar} color="#413D3D" iconColor="yellow" text="Leave a star on Github" direction="right" /></a>
                         </div>
                         <div onClick={handleNext}><Button href={"xxx"} icons={faArrowDown} color="#413D3D" iconColor="white" text="next" direction="right" /></div>
                     </div>

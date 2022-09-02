@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
-import { mousePositionX, mousePositionY, setMousePosition,currentDance,nextDance, previousDance } from '../pages/store';
+import { mousePositionX, mousePositionY, setMousePosition,currentDance,nextDance, previousDance } from './store';
 
 library.add(faBars, faVolumeHigh, faHouseChimneyCrack, faArrowUp, faArrowDown, faBookOpen);
 
@@ -154,7 +154,7 @@ export default function CanvasScreen(props) {
                     <div className={classes.rightButtonDiv}>
                         <div onClick={handlePrevious} onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}><Button href={"xxx"} icons={faArrowUp} color="#413D3D" iconColor="white" text="previous" direction="right" /></div>
                         <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}>
-                            <a href="https://github.com/Sourabh-Bharale/Threecise" target="_blank"><Button backgroundColor="#413D3D" href={"xxx"} icons={faStar} color="#413D3D" iconColor="yellow" text="Leave a star on Github" direction="right" /></a>
+                            <a href="https://github.com/Sourabh-Bharale/Threecise" rel="noreferrer" target="_blank"><Button backgroundColor="#413D3D" href={"xxx"} icons={faStar} color="#413D3D" iconColor="yellow" text="Leave a star on Github" direction="right" /></a>
                         </div >
                         <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave} onClick={handleNext}><Button href={"xxx"} icons={faArrowDown} color="#413D3D" iconColor="white" text="next" direction="right" /></div>
                     </div>

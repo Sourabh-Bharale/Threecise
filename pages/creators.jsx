@@ -74,7 +74,7 @@ function category() {
         </Canvas>
       </div>
       <div className={classes.backgroundImg}>
-        <Image src={background}></Image>
+        <Image src={background} alt='background'></Image>
       </div>
     </div>
   )

@@ -6,7 +6,7 @@ import classes from "./category.module.css"
 import Link from 'next/link';
 import { useRef } from "react";
 import { motion } from "framer-motion";
-import { mousePositionX, mousePositionY,setMousePosition } from './store';
+import { mousePositionX, mousePositionY,setMousePosition } from '../components/store';
 
 export default function Category() {
 

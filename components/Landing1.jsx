@@ -15,7 +15,7 @@ import triangle5 from '../public/img/triangle5.png'
 import './Landing1.module.css';
 import Link from "next/link";
 import useSound from 'use-sound';
-import { welcome, changeWelcome, colors, dances, pages, backgroundCircles, c1, c2, c3, opac, mousePositionX, mousePositionY, setMousePosition } from "../pages/store";
+import { welcome, changeWelcome, colors, dances, pages, backgroundCircles, c1, c2, c3, opac, mousePositionX, mousePositionY, setMousePosition } from "./store";
 import { motion } from "framer-motion";
 
 export default function Landing1() {
@@ -126,7 +126,7 @@ export default function Landing1() {
             </motion.div>
             {myWelcome ?
                 <div className="welcomeDiv">    
-                    <h1 onMouseEnter={textEnter} onMouseLeave={textLeave}>Let's get started</h1>
+                    <h1 onMouseEnter={textEnter} onMouseLeave={textLeave}>Let&apos;s get started</h1>
                     <div onClick={() => { changeWelcome(); setMyWelcome(false); buttonLeave()}} onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}>EXPLORE</div>
                 </div>
                 :
@@ -175,7 +175,7 @@ export default function Landing1() {
                         }
                         return (
 
-                            <div className={returnClassName(index)} style={{ height: `${diameter}px`, width: `${diameter}px` }}>
+                            <div className={returnClassName(index)} key={index} style={{ height: `${diameter}px`, width: `${diameter}px` }}>
                                 {Array(nums).fill(1).map((el, i) =>
                                     <>
                                         <li className={classes.backgroundTriangles} key={i} style={{ transform: `rotate(calc(360deg / ${nums} * ${i}))`, transformOrigin: `${origin}px`, opacity: `${opac[i]}` }}>
