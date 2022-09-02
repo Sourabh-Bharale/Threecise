@@ -21,11 +21,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-<h3 align="center">project_title</h3>
+  
+<h1 align="center">Threecise 🥂🤖✨</h1>
   <p align="center">
    Want to learn some dance moves 💃 or some work outs 🏋️ ?? watching videos  is good but the trouble begins when you start it hard to visualise 😵
 thats where Threecise comes in... learn some dance moves and workouts by a bot 🤖 in 3D how cool that sounds right🤩 !!
@@ -63,10 +60,8 @@ zoom in / out to properly focus 🧐 on a particular body movement of the excerc
       </ul>
     </li>
     <li><a href="#resources-used-throughout-the-journey">Resources</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#contributing">contributing</a></li>
+    <li><a href="#creators">meet the creators</a></li>
   </ol>
 </details>
 
@@ -207,38 +202,36 @@ Don't forget to give the project a star! Thanks again!
 
 ---
 
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
 ## Creators
 
 <div align="center">
     <img  src = "./readme_assets/creators.gif">
  </div>
- 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+ <table>
+  <tr>
+    <td>
+      <h1>Sourabh</h1>
+      <ul>
+        <li><a href="https://github.com/Sourabh-Bharale/"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></img></a></li>
+        <li><a href="https://linkedin.com/in/sourabh-bharale-a9365821a/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"></img></a></li>
+       <li><a href="https://instagram.com/_s0ur48h_/"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white"></img></a></li>
+       </ul>
+    </td>
+   <td>
+       <h1>Aryan</h1>
+      <ul>
+        <li><a href="https://aryanjangid.in">aryanjanid</a></li>      
+        <li><a href="https://github.com/aryanjangid"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></img></a></li>
+        <li><a href="https://www.linkedin.com/in/jangidaryan/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"></img></a></li>
+       <li><a href="https://www.instagram.com/aj_aryan0007/"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white"></img></a></li>
+       </ul>
+    </td>
+  </tr>
+  </table>
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+<strong>Like the project ( UwU ) ?? we would appreciate if you give this repo a star⭐</strong>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
