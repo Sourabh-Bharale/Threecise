@@ -59,7 +59,7 @@ export default function Landing1() {
             x: mousePosition.x - 16,
             y: mousePosition.y - 16,
         },
-        circle: {
+        text: {
             height: 80,
             width: 80,
             x: mousePosition.x - 40,
@@ -67,12 +67,22 @@ export default function Landing1() {
             backgroundColor: "white",
             mixBlendMode: "difference",
             opacity: 1
-
+        },
+        button: {
+            height: 80,
+            width: 80,
+            x: mousePosition.x - 40,
+            y: mousePosition.y - 40,
+            backgroundColor: "black",
+            mixBlendMode: "difference",
+            opacity: 1
         }
     }
 
-    const circleEnter = () => setCursorVariant("circle");
-    const circleLeave = () => setCursorVariant("default");
+    const buttonEnter = () => setCursorVariant("button");
+    const buttonLeave = () => setCursorVariant("default");
+    const textEnter =()=> setCursorVariant("text");
+    const textLeave =()=> setCursorVariant("default");
 
 
 
@@ -99,9 +109,6 @@ export default function Landing1() {
     const pageChangeSFX = '/sounds/pageLoad.mp3'
     const [pageChange] = useSound(pageChangeSFX)
 
-
-
-
     return (
         <>
             <motion.div className="cursor" variants={variants} animate={cursorVariant}>
@@ -109,18 +116,21 @@ export default function Landing1() {
             </motion.div>
             {myWelcome ?
                 <div className="welcomeDiv">
-                    <h1 onMouseEnter={circleEnter} onMouseLeave={circleLeave}>Let's get started</h1>
-                    <div onClick={() => { changeWelcome(); setMyWelcome(false); circleLeave() }} onMouseEnter={circleEnter} onMouseLeave={circleLeave}>EXPLORE</div>
+                    <h1 onMouseEnter={textEnter} onMouseLeave={textLeave}>Let's get started</h1>
+                    <div onClick={() => { changeWelcome(); setMyWelcome(false); buttonLeave()}} onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}>EXPLORE</div>
                 </div>
                 :
                 <div className={classes.main} >
 
                     <div className={classes.buttonDiv}>
-                        <div onClick={() => setMousePosition(mousePosition.x, mousePosition.y)}>
+                        <div onClick={() => setMousePosition(mousePosition.x, mousePosition.y)} onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}>
                             <Button href={"/category"} icons={faBars} color="red" iconColor="white" text="Category" direction="left" />
 
                         </div>
+                        <div onClick={() => setMousePosition(mousePosition.x, mousePosition.y)} onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}>
+
                         <Button href={"/creators"} icons={faFaceGrinBeam} color="red" iconColor="white" text="About creators" direction="left" />
+                        </div>
                     </div>
 
                     <div className={classes.backgroundImageDiv}>
@@ -184,7 +194,7 @@ export default function Landing1() {
                             </Canvas>
                         </div>
 
-                        <div className={classes.contentDiv}>
+                        <div className={classes.contentDiv} onMouseEnter={textEnter} onMouseLeave={textLeave}>
                             <h1 style={{ color: `${colors[currentColor]}` }}>
                                 {dances[currentDance]}
                             </h1>
@@ -195,7 +205,7 @@ export default function Landing1() {
 
                         {Array(13).fill(1).map((el, i) =>
 
-                            <li key={i} style={{ transform: `rotate(calc(360deg / 12 * ${i}))` }}>
+                            <li key={i} style={{ transform: `rotate(calc(360deg / 12 * ${i}))` }} onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}>
                                 <Link href={`${pages[i]}`} >
 
                                     {hoveredCircle == i ?
