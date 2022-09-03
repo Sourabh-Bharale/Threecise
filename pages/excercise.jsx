@@ -71,7 +71,7 @@ export default function Thriller() {
                     </Suspense>
                 </Canvas>
             </div>
-            <CanvasScreen titleName={actions[index]} index={index+1} backgroundColor={colors[index]} category="Exercise" />
+            {/* <CanvasScreen titleName={actions[index]} index={index+1} backgroundColor={colors[index]} category="Exercise" /> */}
 
 
         </div>

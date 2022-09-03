@@ -34,7 +34,7 @@ export default function CanvasScreen(props) {
     const [squatsIndex, setSquatsIndex] = useState(currentSquats);
     const [thrillerIndex, setThrillerIndex] = useState(currentThriller);
     
-    const canvasArray = [ <DanceoffVro action={danceActions[props.page][currentDance]} />,<EMode2 action={danceActions[props.page][currentExercise]}/>, <Funmoves action={danceActions[props.page][currentFunMoves]} />, <HMoves action={danceActions[props.page][currentHipHop]} />, <SModel action={danceActions[props.page][currentSquats]}/>, <TMoves action={danceActions[props.page][currentThriller]}/>  ]
+    const canvasArray = [ <DanceoffVro key="0" action={danceActions[props.page][currentDance]} />,<EMode2 key="1" action={danceActions[props.page][currentExercise]}/>, <Funmoves key="2" action={danceActions[props.page][currentFunMoves]} />, <HMoves key="3" action={danceActions[props.page][currentHipHop]} />, <SModel key="4" action={danceActions[props.page][currentSquats]}/>, <TMoves key="5" action={danceActions[props.page][currentThriller]}/>  ]
     const indexArray =[currentDance,currentExercise, currentFunMoves, currentHipHop, currentSquats, currentThriller];
 
 
