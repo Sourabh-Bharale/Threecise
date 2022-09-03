@@ -203,7 +203,8 @@ Don't forget to give the project a star! Thanks again!
    <td>
        <h1>Aryan</h1>
       <ul>
-        <li><a href="https://aryanjangid.in" style={{backgroundColor:"yellow", color:"white"}}>aryanjanid.in</a></li>      
+        <li><a href="https://aryanjangid.in">
+          <img src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white"></img></a></li>      
         <li><a href="https://github.com/aryanjangid"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></img></a></li>
         <li><a href="https://www.linkedin.com/in/jangidaryan/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"></img></a></li>
        <li><a href="https://www.instagram.com/aj_aryan0007/"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white"></img></a></li>
