@@ -27,8 +27,6 @@ export default function Landing1() {
     const [currentDance, setCurrentDance] = useState(6);
     const [currentColor, setCurrentColor] = useState(6);
 
-
-
     const [mousePosition, setMouse] = useState({
         x: mousePositionX,
         y: mousePositionY,
