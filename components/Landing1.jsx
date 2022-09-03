@@ -125,10 +125,17 @@ export default function Landing1() {
 
             </motion.div>
             {myWelcome ?
-                <div className="welcomeDiv">    
+            <div className="relative h-screen flex flex-col items-center justify-center text-center text-white py-0 px-3">
+            <div className="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
+                <video className="min-w-full min-h-full absolute object-cover" src="/background.mp4" type="video/mp4" autoPlay muted loop></video>
+            </div>
+            <div className="welcomeDiv video-content">    
                     <h1 onMouseEnter={textEnter} onMouseLeave={textLeave}>Let&apos;s get started</h1>
                     <div onClick={() => { changeWelcome(); setMyWelcome(false); buttonLeave()}} onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}>EXPLORE</div>
                 </div>
+        </div>
+        
+                
                 :
                 <div className={classes.main} >
 
