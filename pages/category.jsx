@@ -8,6 +8,13 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { mousePositionX, mousePositionY, setMousePosition } from '../components/store';
 import Warning from '../components/Warning';
+import Image from 'next/image'
+import Dance from '../public/img/dance.gif'
+import Dance2 from '../public/img/dance2.gif'
+import Dance3 from '../public/img/dance3.gif'
+import Dance4 from '../public/img/dance4.gif'
+import Dance5 from '../public/img/dance5.gif'
+
 export default function Category() {
 
 
@@ -95,28 +102,36 @@ export default function Category() {
               <Link href="/thriller"><motion.div className={classes.i6}>THRILLER</motion.div></Link>
 
               <motion.div className={classes.container1} ref={constraintsRef1}>
-                <div className={classes.nullContentDiv}>
-                  BC
+                <div  className={classes.nullContentDiv}>
+                <Image height={"200%"} src={Dance2} alt="ig"></Image>
                 </div>
                 <motion.div className={classes.item1} drag dragConstraints={constraintsRef1}></motion.div>
               </motion.div>
 
               <motion.div className={classes.container2} ref={constraintsRef2}>
+              <div  className={classes.nullContentDiv}>
+                  <Image height={"200%"} src={Dance4} alt="ig"></Image>
+                </div>
                 <motion.div className={classes.item2} drag dragConstraints={constraintsRef2}></motion.div>
               </motion.div>
 
               <motion.div className={classes.container3} ref={constraintsRef3}>
+                <div  className={classes.nullContentDiv}>
+                  <Image height={"500%"} src={Dance} alt="ig"></Image>
+                </div>
                 <motion.div className={classes.item3} drag dragConstraints={constraintsRef3}></motion.div>
               </motion.div>
 
               <motion.div className={classes.container4} ref={constraintsRef4}>
-
+              <div  className={classes.nullContentDiv}>
+                <Image height={"620%"} src={Dance5} alt="ig"></Image>
+                </div>
                 <motion.div className={classes.item4} drag dragConstraints={constraintsRef4}></motion.div>
               </motion.div>
 
               <motion.div className={classes.container5} ref={constraintsRef5}>
-                <div className={classes.nullContentDiv}>
-                  Aditya BC
+              <div  className={classes.nullContentDiv}>
+                <Image height={"500%"} src={Dance3} alt="ig"></Image>
                 </div>
                 <motion.div className={classes.item5} drag dragConstraints={constraintsRef5}></motion.div>
               </motion.div>
@@ -129,6 +144,9 @@ export default function Category() {
               </motion.div>
 
               <motion.div className={classes.container7} ref={constraintsRef7}>
+              <div  className={classes.nullContentDiv}>
+                <Image height={"500%"} src={Dance3} alt="ig"></Image>
+                </div>
                 <motion.div className={classes.item7} drag dragConstraints={constraintsRef7}></motion.div>
               </motion.div>
 

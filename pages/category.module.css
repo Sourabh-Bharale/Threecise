@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor:pointer;
+    
     margin:10px;
     margin-left: 20px;
 }
@@ -60,33 +60,33 @@
     background: white;
     border-radius: 30px;
     position: relative; 
-    cursor: pointer;
+    
     grid-area: header;
 }
 .i2 { 
     background-color: white;
-    cursor: pointer;
+    
     grid-area: menu;
  }
 
 .i3 {
     background-color: white;
-    cursor: pointer;
+    
     grid-area:i3;
 }
 .i4 {
     background-color: white;
-    cursor: pointer;
+    
     grid-area:i4;
 }
 .i5 {
     background-color: white;
-    cursor: pointer;
+    
     grid-area:i5;
 }
 .i6 {
     background-color: white;
-    cursor: pointer;
+    
     grid-area:xx;
 }
 
@@ -104,7 +104,7 @@
     overflow: hidden;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 30px;
-    cursor: grab;
+    
     position: relative;
   }
   
@@ -123,7 +123,7 @@
     place-items: center;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.2);
-    cursor: grab;
+    position:relative;
     border-radius: 30px;
     grid-area:null2;
   }
@@ -143,7 +143,7 @@
     place-items: center;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.2);
-    cursor: grab;
+    position: relative;
     border-radius: 30px;grid-area:null3;
   }
   
@@ -162,7 +162,7 @@
     place-items: center;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.2);
-    cursor: grab;
+    position: relative;
     border-radius: 30px;grid-area:null4;
   }
   
@@ -181,7 +181,7 @@
     overflow: hidden;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 30px;
-    cursor: grab;
+    
     position: relative;grid-area:null5;
   }
   
@@ -199,7 +199,7 @@
     overflow: hidden;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 30px;
-    cursor: grab;
+    
     position: relative;grid-area:null6;
   }
   
@@ -216,7 +216,7 @@
     place-items: center;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.2);
-    cursor: grab;
+    position: relative;
     border-radius: 30px;grid-area:null7;
   }
   
@@ -239,6 +239,10 @@
     transform: translate(-50%, -50%);
     z-index: -1;
     color: white;
+    width: 100%;
+    height: 100%;
+    background-color: #A500F2;
+    object-fit: fill;
 }
 
 .hintLine{
