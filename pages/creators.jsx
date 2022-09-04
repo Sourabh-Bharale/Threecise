@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useState,useEffect } from "react";
 
 import classes from "./creators.module.css"
 import Link from 'next/link'
@@ -17,7 +17,10 @@ import { Canvas } from "@react-three/fiber";
 import { PresentationControls } from "@react-three/drei"
 import SocialButton from "../components/SocialButton";
 import Warning from "../components/Warning";
-function category() {
+
+
+export default function Creators() {
+
   const [isMobile, setisMobile] = useState(false);
 
   useEffect(() => {
@@ -92,4 +95,3 @@ function category() {
   )
 }
 
-export default category
