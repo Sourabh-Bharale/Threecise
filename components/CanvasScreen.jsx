@@ -17,7 +17,7 @@ import HMoves from './Models/hipHop';
 import Funmoves from './Models/funMoves';
 import SModel from './Models/squats';
 import TMoves from "./Models/thrillerMoves";
-
+import Warning from '../components/Warning'
 library.add(faBars, faVolumeHigh, faHouseChimneyCrack, faArrowUp, faArrowDown, faBookOpen);
 
 export default function CanvasScreen(props) {
@@ -204,75 +204,86 @@ export default function CanvasScreen(props) {
     }
 
     
+    const [isMobile,setisMobile] = useState(false);
+
+  useEffect(()=>{
+    if(window.innerWidth<=800)
+    setisMobile(true)
+  })
+    
 
     return (
         <>
+        {isMobile?<Warning/>:
+        <>
+        <motion.div className="cursor" variants={variants} animate={cursorVariant}>
+        </motion.div>
 
-            <motion.div className="cursor" variants={variants} animate={cursorVariant}>
-            </motion.div>
-
-            <div className={classes.backgroundDiv}>
-                <div className={classes.canvasDiv} style={{ backgroundColor: `${currentColor}` }} >
-                    <Image src={lightImage} alt="background image" />
-                    <div className={classes.leftButtonDiv}>
-                        <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave} onClick={() => setMousePosition(mousePosition.x, mousePosition.y)}> <Button href={"/"} icons={faHouseChimneyCrack} color="#413D3D" iconColor="white" text="Home" direction="left" /></div>
-                        <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave} onClick={() => setMousePosition(mousePosition.x, mousePosition.y)}><Button href={"/category"} icons={faBars} color="#413D3D" iconColor="white" text="Category" direction="left" /></div>
-                        <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave} onClick={() => setMousePosition(mousePosition.x, mousePosition.y)}><Button href={"/category"} icons={faVolumeHigh} color="#413D3D" iconColor="white" text="Mute" direction="left" /></div>
+        <div className={classes.backgroundDiv}>
+            <div className={classes.canvasDiv} style={{ backgroundColor: `${currentColor}` }} >
+                <Image src={lightImage} alt="background image" />
+                <div className={classes.leftButtonDiv}>
+                    <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave} onClick={() => setMousePosition(mousePosition.x, mousePosition.y)}> <Button href={"/"} icons={faHouseChimneyCrack} color="#413D3D" iconColor="white" text="Home" direction="left" /></div>
+                    <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave} onClick={() => setMousePosition(mousePosition.x, mousePosition.y)}><Button href={"/category"} icons={faBars} color="#413D3D" iconColor="white" text="Category" direction="left" /></div>
+                    <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave} onClick={() => setMousePosition(mousePosition.x, mousePosition.y)}><Button href={"/category"} icons={faVolumeHigh} color="#413D3D" iconColor="white" text="Mute" direction="left" /></div>
+                </div>
+                <div className={classes.contentDiv} onMouseEnter={textEnter} onMouseLeave={textLeave}>
+                    <div className={classes.category}>
+                        <div style={{ textTransform: "uppercase" }}>
+                            <h6>{props.page}</h6>
+                        </div>
+                        <div className={classes.count}>
+                            <h1>{parseInt(currentCount) + 1}</h1>
+                        </div>
                     </div>
-                    <div className={classes.contentDiv} onMouseEnter={textEnter} onMouseLeave={textLeave}>
-                        <div className={classes.category}>
-                            <div style={{ textTransform: "uppercase" }}>
-                                <h6>{props.page}</h6>
+                    <div className={classes.line} >
+
+                    </div>
+                    <div className={classes.title} style={{ textTransform: "uppercase" }}>
+                        <h1 >{danceActions[props.page][indexArray[props.id]]}</h1>
+                    </div>
+                    <div className={classes.documentDiv}>
+                        <Link href="/">
+                            <div>
+                                <FontAwesomeIcon className={classes.icon} icon={faBookOpen} color={props.iconColor} size="2x" />
                             </div>
-                            <div className={classes.count}>
-                                <h1>{parseInt(currentCount) + 1}</h1>
-                            </div>
-                        </div>
-                        <div className={classes.line} >
-
-                        </div>
-                        <div className={classes.title} style={{ textTransform: "uppercase" }}>
-                            <h1 >{danceActions[props.page][indexArray[props.id]]}</h1>
-                        </div>
-                        <div className={classes.documentDiv}>
-                            <Link href="/">
-                                <div>
-                                    <FontAwesomeIcon className={classes.icon} icon={faBookOpen} color={props.iconColor} size="2x" />
-                                </div>
-                            </Link>
-                        </div>
-                    </div>
-
-                    <div className={classes.bottomLinks}>
-                        <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}><Link href="/creators" >ABOUT US</Link></div>
-                        <div className={classes.line}></div>
-                        <h1 onMouseEnter={textEnter} onMouseLeave={textLeave}>ALL COPYRIGHT RESERVED</h1>
-                        <div className={classes.line}></div>
-                        <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}><Link href="/">SHARE </Link></div>
-                    </div>
-                    <div className={classes.outerDiv}>
-                        <div>
-                        </div>
-                        <Canvas alpha={true}>
-                            <ambientLight intensity={0.5} />
-                            <pointLight intensity={2} position={[-1, 1, 3]} color="#A5C9CA" />
-                            <pointLight intensity={2} position={[1, 1, 3]} color="#395B64" />
-                            <pointLight intensity={2} position={[0, 3, -10]} color="#2C3639" />
-                            <OrbitControls enableDamping={true} enableZoom={true} />
-                            <Suspense fallback={null}>
-                                {canvasArray[props.id]}
-                            </Suspense>
-                        </Canvas>
-                    </div>
-                    <div className={classes.rightButtonDiv}>
-                        <div onClick={handlePrevious} onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}><Button href={"xxx"} icons={faArrowUp} color="#413D3D" iconColor="white" text="previous" direction="right" /></div>
-                        <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}>
-                            <a href="https://github.com/Sourabh-Bharale/Threecise" rel="noreferrer" target="_blank"><Button backgroundColor="#413D3D" href={"xxx"} icons={faStar} color="#413D3D" iconColor="yellow" text="Leave a star on Github" direction="right" /></a>
-                        </div >
-                        <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave} onClick={handleNext}><Button href={"xxx"} icons={faArrowDown} color="#413D3D" iconColor="white" text="next" direction="right" /></div>
+                        </Link>
                     </div>
                 </div>
+
+                <div className={classes.bottomLinks}>
+                    <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}><Link href="/creators" >ABOUT US</Link></div>
+                    <div className={classes.line}></div>
+                    <h1 onMouseEnter={textEnter} onMouseLeave={textLeave}>ALL COPYRIGHT RESERVED</h1>
+                    <div className={classes.line}></div>
+                    <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}><Link href="/">SHARE </Link></div>
+                </div>
+                <div className={classes.outerDiv}>
+                    <div>
+                    </div>
+                    <Canvas alpha={true}>
+                        <ambientLight intensity={0.5} />
+                        <pointLight intensity={2} position={[-1, 1, 3]} color="#A5C9CA" />
+                        <pointLight intensity={2} position={[1, 1, 3]} color="#395B64" />
+                        <pointLight intensity={2} position={[0, 3, -10]} color="#2C3639" />
+                        <OrbitControls enableDamping={true} enableZoom={true} />
+                        <Suspense fallback={null}>
+                            {canvasArray[props.id]}
+                        </Suspense>
+                    </Canvas>
+                </div>
+                <div className={classes.rightButtonDiv}>
+                    <div onClick={handlePrevious} onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}><Button href={"xxx"} icons={faArrowUp} color="#413D3D" iconColor="white" text="previous" direction="right" /></div>
+                    <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}>
+                        <a href="https://github.com/Sourabh-Bharale/Threecise" rel="noreferrer" target="_blank"><Button backgroundColor="#413D3D" href={"xxx"} icons={faStar} color="#413D3D" iconColor="yellow" text="Leave a star on Github" direction="right" /></a>
+                    </div >
+                    <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave} onClick={handleNext}><Button href={"xxx"} icons={faArrowDown} color="#413D3D" iconColor="white" text="next" direction="right" /></div>
+                </div>
             </div>
+        </div>
+        </>
+        }
+            
         </>
 
     )

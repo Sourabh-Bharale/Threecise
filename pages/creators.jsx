@@ -16,67 +16,79 @@ import { CreatorAryan } from '../components/Models/Aryan'
 import { Canvas } from "@react-three/fiber";
 import { PresentationControls } from "@react-three/drei"
 import SocialButton from "../components/SocialButton";
-
+import Warning from "../components/Warning";
 function category() {
+  const [isMobile, setisMobile] = useState(false);
 
+  useEffect(() => {
+    if (window.innerWidth <= 800)
+      setisMobile(true)
+  })
 
   const action = "default";
   const action2 = "default1";
 
   return (
-    <div >
-      <div className={classes.closeButtonDiv}>
-        <Link href="/">
-          <div className={classes.button} style={{ border: `0.3rem solid white`, }}>
-            <FontAwesomeIcon className={classes.icon} icon={faHome} color="red" size="2x" />
+    <>
+      {isMobile ? <Warning /> :
+        <div >
+          <div className="warning">Warning</div>
+
+          <div className={classes.closeButtonDiv}>
+            <Link href="/">
+              <div className={classes.button} style={{ border: `0.3rem solid white`, }}>
+                <FontAwesomeIcon className={classes.icon} icon={faHome} color="red" size="2x" />
+              </div>
+            </Link>
           </div>
-        </Link>
-      </div>
-      <div className={classes.socialDiv} style={{
-        left: "7rem",
-        backgroundColor: "#A500F2"
-      }}>
-        
-        <SocialButton icon={web} id="cooking something for ya" ></SocialButton>
-        <SocialButton icon={git} id="Sourabh-Bharale" goto='https://github.com/Sourabh-Bharale'></SocialButton>
-        <div className={classes.nameDiv} style={{ color: "#A500F2" }}>
-          <h1>SOURABH</h1>
+          <div className={classes.socialDiv} style={{
+            left: "7rem",
+            backgroundColor: "#A500F2"
+          }}>
+
+            <SocialButton icon={web} id="cooking something for ya" ></SocialButton>
+            <SocialButton icon={git} id="Sourabh-Bharale" goto='https://github.com/Sourabh-Bharale'></SocialButton>
+            <div className={classes.nameDiv} style={{ color: "#A500F2" }}>
+              <h1>SOURABH</h1>
+            </div>
+            <SocialButton icon={linked} id="Sourabh Bharale" goto='https://www.linkedin.com/in/sourabh-bharale-a9365821a/'></SocialButton>
+            <SocialButton icon={insta} id="_s0ur48h_" goto='https://www.instagram.com/_s0ur48h_/'></SocialButton>
+          </div>
+
+          <div className={classes.socialDiv} style={{
+            top: "7rem",
+            right: "7rem",
+            backgroundColor: "#EE3939",
+          }}>
+            <SocialButton icon={web} id="aryanjangid.in" goto='https://www.aryanjangid.in/'></SocialButton>
+            <SocialButton icon={git} id="aryanjangid" goto='https://github.com/aryanjangid'></SocialButton>
+            <div className={classes.nameDiv} style={{ color: "#EE3939" }}>
+              <h1>ARYAN</h1>
+            </div>
+            <SocialButton icon={linked} id="Aryan Jangid" goto='https://www.linkedin.com/in/jangidaryan/'></SocialButton>
+            <SocialButton icon={insta} id="aj_aryan0007" goto='https://www.instagram.com/aj_aryan0007/'></SocialButton>
+          </div>
+          <div className={classes.model}>
+            <Canvas alpha={true}>
+              <ambientLight intensity={1} />
+              <pointLight intensity={2} position={[-1, 1, 3]} color="#A5C9CA" />
+              <pointLight intensity={2} position={[1, 1, 3]} color="#395B64" />
+              <pointLight intensity={2} position={[0, 3, -10]} color="#2C3639" />
+              <PresentationControls global zoom={0.8} rotation={[0, 0, 0]} polar={[0, Math.PI / 4]} azimuth={[-Math.PI / 4, Math.PI / 4]}>
+                <Suspense fallback={null}>
+                  <CreatorSourabh action={action} />
+                  <CreatorAryan action2={action2} />
+                </Suspense>
+              </PresentationControls>
+            </Canvas>
+          </div>
+          <div className={classes.backgroundImg}>
+            <Image src={background} alt='background'></Image>
+          </div>
         </div>
-        <SocialButton icon={linked} id="Sourabh Bharale" goto='https://www.linkedin.com/in/sourabh-bharale-a9365821a/'></SocialButton>
-        <SocialButton icon={insta} id="_s0ur48h_" goto='https://www.instagram.com/_s0ur48h_/'></SocialButton>
-        </div>
-      
-      <div className={classes.socialDiv} style={{
-        top: "7rem",
-        right: "7rem",
-        backgroundColor: "#EE3939", 
-      }}>
-        <SocialButton icon={web} id="aryanjangid.in" goto='https://www.aryanjangid.in/'></SocialButton>
-        <SocialButton icon={git} id="aryanjangid" goto='https://github.com/aryanjangid'></SocialButton>
-        <div className={classes.nameDiv} style={{ color: "#EE3939" }}>
-          <h1>ARYAN</h1>
-        </div>
-        <SocialButton icon={linked} id="Aryan Jangid" goto='https://www.linkedin.com/in/jangidaryan/'></SocialButton>
-        <SocialButton icon={insta} id="aj_aryan0007" goto='https://www.instagram.com/aj_aryan0007/'></SocialButton>
-      </div>
-      <div className={classes.model}>
-        <Canvas alpha={true}>
-          <ambientLight intensity={1} />
-          <pointLight intensity={2} position={[-1, 1, 3]} color="#A5C9CA" />
-          <pointLight intensity={2} position={[1, 1, 3]} color="#395B64" />
-          <pointLight intensity={2} position={[0, 3, -10]} color="#2C3639" />
-          <PresentationControls global zoom={0.8} rotation={[0, 0, 0]} polar={[0, Math.PI / 4]} azimuth={[-Math.PI / 4, Math.PI / 4]}>
-            <Suspense fallback={null}>
-              <CreatorSourabh action={action} />
-              <CreatorAryan action2={action2} />
-            </Suspense>
-          </PresentationControls>
-        </Canvas>
-      </div>
-      <div className={classes.backgroundImg}>
-        <Image src={background} alt='background'></Image>
-      </div>
-    </div>
+      }
+
+    </>
   )
 }
 
