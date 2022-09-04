@@ -35,8 +35,6 @@ export default function Creators() {
     <>
       {isMobile ? <Warning /> :
         <div >
-          <div className="warning">Warning</div>
-
           <div className={classes.closeButtonDiv}>
             <Link href="/">
               <div className={classes.button} style={{ border: `0.3rem solid white`, }}>
