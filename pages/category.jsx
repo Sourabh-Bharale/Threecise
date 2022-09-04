@@ -164,7 +164,7 @@ export default function Category() {
 
               <motion.div className={classes.container7} ref={constraintsRef7}>
                 <div className={classes.textContentDiv}>
-                ❌ OPP'S not this one ❌
+                ❌ OPP&apos;S not this one ❌
                 </div>
                 <motion.div className={classes.item7} drag dragConstraints={constraintsRef7}></motion.div>
               </motion.div>
