@@ -3,7 +3,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin:2rem auto;
+    /* margin:2rem auto; */
+    margin-bottom: 2rem;
 }
 
 .button{
@@ -13,7 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor:pointer;
+    
     margin:10px;
     margin-left: 20px;
 }
@@ -60,37 +61,60 @@
     background: white;
     border-radius: 30px;
     position: relative; 
-    cursor: pointer;
+    transform: 250ms cubic-bezier(0.1, 0.2, 0.3, 0.4);
     grid-area: header;
 }
 .i2 { 
     background-color: white;
-    cursor: pointer;
+    transform: 250ms cubic-bezier(0.1, 0.2, 0.3, 0.4);
+    
     grid-area: menu;
  }
 
 .i3 {
     background-color: white;
-    cursor: pointer;
+    transform: 250ms cubic-bezier(0.1, 0.2, 0.3, 0.4);
+    
     grid-area:i3;
 }
 .i4 {
     background-color: white;
-    cursor: pointer;
+    transform: 250ms cubic-bezier(0.1, 0.2, 0.3, 0.4);
+    
     grid-area:i4;
 }
 .i5 {
     background-color: white;
-    cursor: pointer;
+    transform: 250ms cubic-bezier(0.1, 0.2, 0.3, 0.4);
+    
     grid-area:i5;
 }
 .i6 {
     background-color: white;
-    cursor: pointer;
+    transform: 250ms cubic-bezier(0.1, 0.2, 0.3, 0.4);
+    
     grid-area:xx;
 }
 
-
+.containeri1:hover{
+  transform: translateY(-10px);
+}
+.i2:hover{
+  transform: translateY(-10px);
+}
+.i3:hover{
+  transform: translatex(10px);
+}
+.i4:hover{
+  transform: translatex(-10px);
+}
+.i5:hover{
+  /* transform: translatex(-10px); */
+  scale: 1.02;
+}
+.i6:hover{
+  transform: translateY(10px);
+}
 /* ///////////////////////////////  Null Div //////////////////////////////////// */
 
 
@@ -104,7 +128,7 @@
     overflow: hidden;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 30px;
-    cursor: grab;
+    
     position: relative;
   }
   
@@ -123,7 +147,7 @@
     place-items: center;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.2);
-    cursor: grab;
+    position:relative;
     border-radius: 30px;
     grid-area:null2;
   }
@@ -143,7 +167,7 @@
     place-items: center;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.2);
-    cursor: grab;
+    position: relative;
     border-radius: 30px;grid-area:null3;
   }
   
@@ -162,7 +186,7 @@
     place-items: center;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.2);
-    cursor: grab;
+    position: relative;
     border-radius: 30px;grid-area:null4;
   }
   
@@ -181,7 +205,7 @@
     overflow: hidden;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 30px;
-    cursor: grab;
+    
     position: relative;grid-area:null5;
   }
   
@@ -199,7 +223,7 @@
     overflow: hidden;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 30px;
-    cursor: grab;
+    
     position: relative;grid-area:null6;
   }
   
@@ -216,7 +240,7 @@
     place-items: center;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.2);
-    cursor: grab;
+    position: relative;
     border-radius: 30px;grid-area:null7;
   }
   
@@ -239,6 +263,21 @@
     transform: translate(-50%, -50%);
     z-index: -1;
     color: white;
+    width: 100%; 
+    height: 100%;
+    background-color: #A500F2;
+    /* object-fit: fill; */
+}
+.textContentDiv{
+  position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    z-index: -1;
+    width: 100%; 
 }
 
 .hintLine{
@@ -246,4 +285,43 @@
     color: white;
     margin-top: 2rem;
     letter-spacing: 0.2rem;
+    animation: colorchange 5s infinite alternate;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+}
+
+@keyframes colorchange {
+  0% {
+    color:#64D6E2;
+  }
+  10% {
+    color: #64D6E2;
+  }
+  20% {
+    color: #64D6E2;
+  }
+  30% {
+    color: #A500F2;
+  }
+  40% {
+    color: #A500F2;
+  }
+  50% {
+    color: #A500F2;
+  }
+  60% {
+    color: #FFCF23;
+  }
+  70% {
+    color: #FFCF23;
+  }
+  80% {
+    color: #FFCF23;
+  }
+  90% {
+    color: #F83434;
+  }
+  100% {
+    color: #F83434;
+  }
 }
