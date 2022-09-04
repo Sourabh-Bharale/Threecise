@@ -34,7 +34,7 @@ export default function Creators() {
   return (
     <>
       {isMobile ? <Warning /> :
-        <div >
+        <div className="bg-[#ECC73F]">
           <div className={classes.closeButtonDiv}>
             <Link href="/">
               <div className={classes.button} style={{ border: `0.3rem solid white`, }}>
@@ -83,9 +83,7 @@ export default function Creators() {
               </PresentationControls>
             </Canvas>
           </div>
-          <div className={classes.backgroundImg}>
-            <Image src={background} alt='background'></Image>
-          </div>
+          
         </div>
       }
 
