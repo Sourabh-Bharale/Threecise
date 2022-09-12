@@ -122,7 +122,8 @@ export default function Landing1() {
             <motion.div className="cursor" variants={variants} animate={cursorVariant}>
 
             </motion.div>
-            {myWelcome ?
+            {
+            myWelcome ?
             <div className="relative h-screen flex flex-col items-center justify-center text-center text-white py-0 px-3">
             <div className="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
                 <video className="min-w-full min-h-full absolute object-cover" src="/background.mp4" type="video/mp4" autoPlay muted loop></video>
@@ -132,7 +133,7 @@ export default function Landing1() {
                     <div onClick={() => { changeWelcome(); setMyWelcome(false); buttonLeave()}} onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}>EXPLORE</div>
                 </div>
         </div>
-        
+                
                 
                 :
                 <div className={classes.main} >

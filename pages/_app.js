@@ -1,10 +1,24 @@
 import "../styles/globals.css";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
+import Router from "next/router";
+import Loader from "../components/Loader";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
 function MyApp({ Component, pageProps }) {
+  
+  const[loading,setLoading]=useState(false);
+
+  Router.events.on('routeChangeStart',(url)=>{
+    // alert(url)
+    setLoading(true);
+})
+Router.events.on('routeChangeComplete',(url)=>{
+  // alert(url)
+  setLoading(false);
+})
+  
   useEffect(() => {
     const threeScript = document.createElement("script");
     threeScript.setAttribute("id", "threeScript");
@@ -22,7 +36,15 @@ function MyApp({ Component, pageProps }) {
       }
     };
   }, []);
-  return <Component {...pageProps} />;
+  return (
+    <>
+    {loading ? <Loader/>
+    :
+    <Component {...pageProps} />
+    }
+      
+      </>
+  );
 }
 
 export default MyApp;
