@@ -24,7 +24,7 @@ export default function Funmoves({ action }) {
   return (
     <group ref={group} dispose={null}>
       <group name="Scene">
-        <group name="Armature" position={[0,-2,0]} rotation={[Math.PI / 2, 0, 0]} scale={0.02}>
+        <group name="Armature" position={[0,-3,0]} rotation={[Math.PI / 2, 0, 0]} scale={0.037}>
           <primitive object={nodes.mixamorigHips} />
           <skinnedMesh name="Alpha_Joints" geometry={nodes.Alpha_Joints.geometry} material={materials.Alpha_Joints_MAT} skeleton={nodes.Alpha_Joints.skeleton} />
           <skinnedMesh name="Alpha_Surface" geometry={nodes.Alpha_Surface.geometry} material={materials.Alpha_Body_MAT} skeleton={nodes.Alpha_Surface.skeleton} />
