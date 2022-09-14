@@ -1,14 +1,7 @@
 import Head from 'next/head'
-// import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-// import { Squats, ThrillerMoves, HipHop, Excercise1, Excercise2, DanceOff, FunMoves } from '../components'
 import Landing1 from '../components/Landing'
 import { useEffect, useState } from 'react';
-import { motion } from "framer-motion";
-import Welcome from '../components/Welcome';
-import {BrowserRouter} from 'react-router-dom'
 import Warning from '../components/Warning';
-import Loader from '../components/Loader'
 
 
 

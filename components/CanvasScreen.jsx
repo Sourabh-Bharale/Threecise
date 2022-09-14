@@ -9,8 +9,6 @@ import { motion } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import DanceoffVro from "../components/Models/danceoff"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Link from 'next/link';
 import EMode2 from "../components/Models/excercise2";
 import { mousePositionX, mousePositionY, setMousePosition, currentDance, nextDance, previousDance, danceActions, colors, currentExercise, nextExercise, previousExercise, currentFunMoves, currentSquats, currentThriller, currentHipHop, previousFunMoves, nextFunMoves, previousHipHop, nextHipHop, previousSquats, previousThriller, nextSquats, nextThriller } from './store';
 import HMoves from './Models/hipHop';

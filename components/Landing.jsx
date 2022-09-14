@@ -12,7 +12,6 @@ import triangle2 from '../public/img/triangle2.png'
 import triangle3 from '../public/img/triangle3.png'
 import triangle4 from '../public/img/triangle4.png'
 import triangle5 from '../public/img/triangle5.png'
-// import './Landing1.module.css';
 import Link from "next/link";
 import useSound from 'use-sound';
 import { welcome, changeWelcome, colors, dances, pages, backgroundCircles, c1, c2, c3, opac, mousePositionX, mousePositionY, setMousePosition } from "./store";

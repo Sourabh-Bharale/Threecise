@@ -1,22 +1,17 @@
 import React, { Suspense, useState, useEffect } from "react";
-
 import classes from "./creators.module.css"
 import Link from 'next/link'
-import Image from 'next/image'
 import insta from '../public/img/insta.svg'
 import linked from '../public/img/linked.svg'
 import git from '../public/img/git.svg'
 import web from '../public/img/web.png'
-import background from '.././public/img/create back.jpg'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { OrbitControls } from "@react-three/drei";
 import { motion } from "framer-motion";
-
 import { CreatorSourabh } from '../components/Models/Sourabh'
 import { CreatorAryan } from '../components/Models/Aryan'
 import { Canvas } from "@react-three/fiber";
-import { PresentationControls } from "@react-three/drei"
 import SocialButton from "../components/SocialButton";
 import Warning from "../components/Warning";
 import { mousePositionX, mousePositionY } from "../components/store";

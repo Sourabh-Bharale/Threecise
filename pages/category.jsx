@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import Button from '../components/Button'
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classes from "./category.module.css"
