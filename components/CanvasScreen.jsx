@@ -4,7 +4,7 @@ import lightImage from '../public/img/lightbg.png';
 import Image from 'next/image';
 import Button from './Button';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faBars, faVolumeHigh, faHouseChimneyCrack, faArrowUp, faArrowDown, faBookOpen, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faVolumeHigh, faHouseChimneyCrack, faArrowUp, faArrowDown, faBookOpen, faStar, faFaceGrinBeam } from '@fortawesome/free-solid-svg-icons';
 import { motion } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
@@ -12,7 +12,7 @@ import DanceoffVro from "../components/Models/danceoff"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import EMode2 from "../components/Models/excercise2";
-import { mousePositionX, mousePositionY, setMousePosition, currentDance, nextDance, previousDance, danceActions, colors, currentExercise, nextExercise, previousExercise, currentFunMoves, currentSquats, currentThriller, currentHipHop, previousFunMoves, nextFunMoves, previousHipHop, nextHipHop, previousSquats, previousThriller, nextSquats,  } from './store';
+import { mousePositionX, mousePositionY, setMousePosition, currentDance, nextDance, previousDance, danceActions, colors, currentExercise, nextExercise, previousExercise, currentFunMoves, currentSquats, currentThriller, currentHipHop, previousFunMoves, nextFunMoves, previousHipHop, nextHipHop, previousSquats, previousThriller, nextSquats,  nextThriller} from './store';
 import HMoves from './Models/hipHop';
 import Funmoves from './Models/funMoves';
 import SModel from './Models/squats';
@@ -37,7 +37,7 @@ export default function CanvasScreen(props) {
     const canvasArray = [ <DanceoffVro key="0" action={danceActions[props.page][currentDance]} />,<EMode2 key="1" action={danceActions[props.page][currentExercise]}/>, <Funmoves key="2" action={danceActions[props.page][currentFunMoves]} />, <HMoves key="3" action={danceActions[props.page][currentHipHop]} />, <SModel key="4" action={danceActions[props.page][currentSquats]}/>, <TMoves key="5" action={danceActions[props.page][currentThriller]}/>  ]
     const indexArray =[currentDance,currentExercise, currentFunMoves, currentHipHop, currentSquats, currentThriller];
 
-
+    console.log(danceActions[props.page][currentThriller])
     const [currentCategory, setCursorCategory] =useState(props.id);
     const [currentColor,setCurrentColor] = useState(colors[indexArray[currentCategory]]);
     const [currentCount,setCurrentCount] = useState(currentCategory);
@@ -91,7 +91,7 @@ export default function CanvasScreen(props) {
 
         if (props.page === "thriller") {
             previousThriller(thrillerIndex);
-            setSquatsIndex(currentThriller);
+            setThrillerIndex(currentThriller);
             setCurrentColor(colors[thrillerIndex+1]);
             setCurrentCount(currentThriller)
             num=currentThriller;
@@ -137,7 +137,7 @@ export default function CanvasScreen(props) {
         }
         if (props.page === "thriller") {
             nextThriller(thrillerIndex);
-            setSquatsIndex(currentThriller);
+            setThrillerIndex(currentThriller);
             setCurrentColor(colors[thrillerIndex+1]);
             setCurrentCount(currentThriller)
             num=currentThriller;
@@ -225,7 +225,7 @@ export default function CanvasScreen(props) {
                 <div className={classes.leftButtonDiv}>
                     <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave} onClick={() => setMousePosition(mousePosition.x, mousePosition.y)}> <Button href={"/"} icons={faHouseChimneyCrack} color="#413D3D" iconColor="white" text="Home" direction="left" /></div>
                     <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave} onClick={() => setMousePosition(mousePosition.x, mousePosition.y)}><Button href={"/category"} icons={faBars} color="#413D3D" iconColor="white" text="Category" direction="left" /></div>
-                    <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave} onClick={() => setMousePosition(mousePosition.x, mousePosition.y)}><Button href={"/category"} icons={faVolumeHigh} color="#413D3D" iconColor="white" text="Mute" direction="left" /></div>
+                    <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave} onClick={() => setMousePosition(mousePosition.x, mousePosition.y)}><Button href={"/creators"} icons={faFaceGrinBeam} color="#413D3D" iconColor="white" text="About creators" direction="left" /></div>
                 </div>
                 <div className={classes.contentDiv} onMouseEnter={textEnter} onMouseLeave={textLeave}>
                     <div className={classes.category}>
@@ -242,21 +242,22 @@ export default function CanvasScreen(props) {
                     <div className={classes.title} style={{ textTransform: "uppercase" }}>
                         <h1 >{danceActions[props.page][indexArray[props.id]]}</h1>
                     </div>
-                    <div className={classes.documentDiv}>
+                    {/* <div className={classes.documentDiv}>
                         <Link href="/">
                             <div>
                                 <FontAwesomeIcon className={classes.icon} icon={faBookOpen} color={props.iconColor} size="2x" />
                             </div>
                         </Link>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className={classes.bottomLinks}>
-                    <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}><Link href="/creators" >ABOUT US</Link></div>
+                    {/* <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}><Link href="/creators" >ABOUT US</Link></div> */}
+                    {/* <div className={classes.line}></div> */}
+                    <h1 onMouseEnter={textEnter} onMouseLeave={textLeave}>MADE WITH ❤️</h1>
                     <div className={classes.line}></div>
                     <h1 onMouseEnter={textEnter} onMouseLeave={textLeave}>ALL COPYRIGHT RESERVED</h1>
-                    <div className={classes.line}></div>
-                    <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}><Link href="/">SHARE </Link></div>
+                    {/* <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}><Link href="/">SHARE </Link></div> */}
                 </div>
                 <div className={classes.outerDiv}>
                     <div>
