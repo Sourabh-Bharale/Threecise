@@ -137,7 +137,7 @@ export default function Creators() {
             </motion.div>
 
             <motion.div initial={{ y: -10, opacity: 0, scale: 0.5 }}
-              animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} className={classes.socialDiv} style={{
+              animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 1 }} className={classes.socialDiv} style={{
                 top: "7rem",
                 right: "7rem",
                 backgroundColor: "#EE3939",
