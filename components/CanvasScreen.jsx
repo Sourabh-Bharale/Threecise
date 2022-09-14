@@ -37,16 +37,11 @@ export default function CanvasScreen(props) {
     const canvasArray = [<DanceoffVro key="0" action={danceActions[props.page][currentDance]} />, <EMode2 key="1" action={danceActions[props.page][currentExercise]} />, <Funmoves key="2" action={danceActions[props.page][currentFunMoves]} />, <HMoves key="3" action={danceActions[props.page][currentHipHop]} />, <SModel key="4" action={danceActions[props.page][currentSquats]} />, <TMoves key="5" action={danceActions[props.page][currentThriller]} />]
     const indexArray = [currentDance, currentExercise, currentFunMoves, currentHipHop, currentSquats, currentThriller];
 
-    console.log(danceActions[props.page][currentThriller])
     const [currentCategory, setCursorCategory] = useState(props.id);
     const [currentColor, setCurrentColor] = useState(colors[indexArray[currentCategory]]);
     const [currentCount, setCurrentCount] = useState(currentCategory);
 
     const hoverSfx = '/sounds/hover.mp3';
-    // const [hoverPlay, { hoverStop }] = useSound(hoverSfx);
-    // const currentColors =()=>{
-    //     return currentColor
-    // }
     let num = indexArray[props.id];
 
     const handlePrevious = () => {
@@ -158,7 +153,6 @@ export default function CanvasScreen(props) {
     useEffect(() => {
 
         const mouseMove = (e) => {
-            // setMousePosition(e.clientX,e.clientY)
             setMouse({
                 x: e.clientX,
                 y: e.clientY
@@ -248,25 +242,15 @@ export default function CanvasScreen(props) {
                                     animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 1.3 }} className={classes.title} style={{ textTransform: "uppercase" }}>
                                     <h1 >{danceActions[props.page][indexArray[props.id]]}</h1>
                                 </motion.div>
-                                {/* <div className={classes.documentDiv}>
-                        <Link href="/">
-                            <div>
-                                <FontAwesomeIcon className={classes.icon} icon={faBookOpen} color={props.iconColor} size="2x" />
-                            </div>
-                        </Link>
-                    </div> */}
                             </div>
 
                             <div className={classes.bottomLinks}>
-                                {/* <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}><Link href="/creators" >ABOUT US</Link></div> */}
-                                {/* <div className={classes.line}></div> */}
                                 <motion.h1 initial={{ y: 0, opacity: 0, scale: 0.5 }}
                                     animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 1.9 }} onMouseEnter={textEnter} onMouseLeave={textLeave}>MADE WITH ❤️</motion.h1>
                                 <motion.div initial={{ y: 0, opacity: 0, scale: 0.5 }}
                                     animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 2 }} className={classes.line}></motion.div>
                                 <motion.h1 initial={{ y: 0, opacity: 0, scale: 0.5 }}
                                     animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 2.1 }} onMouseEnter={textEnter} onMouseLeave={textLeave}>ALL COPYRIGHT RESERVED</motion.h1>
-                                {/* <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}><Link href="/">SHARE </Link></div> */}
                             </div>
                             <div className={classes.outerDiv}>
                                 <div>
@@ -287,7 +271,7 @@ export default function CanvasScreen(props) {
                                     animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 3 }} onClick={handlePrevious} onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}><Button href={"xxx"} icons={faArrowUp} color="#413D3D" iconColor="white" text="previous" direction="right" /></motion.div>
                                 <motion.div initial={{ y: 0, opacity: 0, scale: 0.5 }}
                                     animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 3.2 }} onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}>
-                                    <a href="https://github.com/Sourabh-Bharale/Threecise" rel="noreferrer" target="_blank"><Button backgroundColor="#413D3D" href={"xxx"} icons={faStar} color="#413D3D" iconColor="yellow" text="Leave a star on Github" direction="right" /></a>
+                                    <a href="https://github.com/aryanjangid/Threecise" rel="noreferrer" target="_blank"><Button backgroundColor="#413D3D" href={"xxx"} icons={faStar} color="#413D3D" iconColor="yellow" text="Leave a star on Github" direction="right" /></a>
                                 </motion.div >
                                 <motion.div initial={{ y: 0, opacity: 0, scale: 0.5 }}
                                     animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 3.4 }} onMouseEnter={buttonEnter} onMouseLeave={buttonLeave} onClick={handleNext}><Button href={"xxx"} icons={faArrowDown} color="#413D3D" iconColor="white" text="next" direction="right" /></motion.div>

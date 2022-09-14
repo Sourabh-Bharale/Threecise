@@ -1,7 +1,6 @@
 
 .buttonDiv{
   display: flex;
-  /* justify-content: center; */
   align-content: center;
 }
 
@@ -17,9 +16,6 @@
   transition: 0.5s ease-in-out;
 }
 
-/* .buttonDiv:hover .button{
-  background-color: #413F42;
-} */
 
 .icon{
   width: 500px;

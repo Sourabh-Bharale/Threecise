@@ -78,7 +78,7 @@ export default function Creators() {
       width: 80,
       x: mousePosition.x - 40,
       y: mousePosition.y - 40,
-      backgroundColor: "green",
+      backgroundColor: "yellow",
       mixBlendMode: "difference",
       opacity: 1
     },
@@ -87,7 +87,7 @@ export default function Creators() {
       width: 80,
       x: mousePosition.x - 40,
       y: mousePosition.y - 40,
-      backgroundColor: "blue",
+      backgroundColor: "white",
       mixBlendMode: "difference",
       opacity: 1
     }
@@ -123,7 +123,7 @@ export default function Creators() {
               }}>
 
               <motion.div initial={{ y: -10, opacity: 0, scale: 0.5 }}
-                animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 2.1 }} onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}><SocialButton icon={web} id="cooking something for ya" ></SocialButton></motion.div>
+                animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 2.1 }} onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}><SocialButton icon={web} id="Coming Soon" ></SocialButton></motion.div>
               <motion.div initial={{ y: -10, opacity: 0, scale: 0.5 }}
                 animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 2.12 }} onMouseEnter={buttonEnter} onMouseLeave={buttonLeave}><SocialButton icon={git} id="Sourabh-Bharale" goto='https://github.com/Sourabh-Bharale'></SocialButton></motion.div>
               <motion.div initial={{ y: -10, opacity: 0, scale: 0.5 }}
@@ -162,12 +162,10 @@ export default function Creators() {
                 <pointLight intensity={2} position={[1, 1, 3]} color="#395B64" />
                 <pointLight intensity={2} position={[0, 3, -10]} color="#2C3639" />
                 <OrbitControls enableDamping={true} enableZoom={false} />
-                {/* <PresentationControls global zoom={0.8} rotation={[0, 0, 0]} polar={[0, Math.PI / 4]} azimuth={[-Math.PI / 4, Math.PI / 4]}> */}
-                <Suspense fallback={null}>
+               <Suspense fallback={null}>
                   <CreatorSourabh action={action} />
                   <CreatorAryan action2={action2} />
                 </Suspense>
-                {/* </PresentationControls> */}
               </Canvas>
             </motion.div>
 

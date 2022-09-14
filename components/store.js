@@ -46,8 +46,6 @@ export const setMousePosition = (x, y) => {
 }
 
 
-const actions = ["idle", "Belly Dance", "Shopping Cart ", "Break Dance1", "Dance Tweark", "Flair", "Gagnam Style", "House Dance", "Silly", "Soul Spin Combo"]
-
 export let currentDance = 0;
 export const nextDance=(index)=>{
     var l = index + 1;

@@ -3,7 +3,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin:2rem auto; */
     margin-bottom: 2rem;
 }
 
@@ -137,11 +136,8 @@
     height: 100%;
     background: #FFCF23;
     border-radius: inherit;
-    /* color:white */
   }
   .container2 {
-    /* width: 200px; */
-    /* height: 200px; */
     display: flex;
     place-content: center;
     place-items: center;
@@ -157,10 +153,8 @@
     height: 100%;
     background: #FFCF23;
     border-radius: inherit;
-    /* color:white */
   }
   .container3 {
-    /* width: 200px; */
     height: 220px;
     display: flex;
     place-content: center;
@@ -176,11 +170,8 @@
     height: 100%;
     background: #A500F2;
     border-radius: inherit;
-    /* color:white */
   }
   .container4 {
-    /* width: 200px; */
-    /* height: 200px; */
     display: flex;
     place-content: center;
     place-items: center;
@@ -196,7 +187,6 @@
     height: 100%;
     background: #F83434;
     border-radius: inherit;
-    /* color:white */
   }
   .container5 {
     display: flex;
@@ -266,7 +256,6 @@
     width: 100%; 
     height: 100%;
     background-color: #A500F2;
-    /* object-fit: fill; */
 }
 .textContentDiv{
   position: absolute;
