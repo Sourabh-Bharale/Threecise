@@ -214,9 +214,9 @@ export default function Landing1() {
                             <h1 style={{ color: `${colors[currentColor]}` }}>
                                 {dances[currentDance]}
                             </h1>
-                            <h4>
+                            {/* <h4>
                                 become proficient in <span style={{ color: "white" }} >{dances[currentDance]}</span>
-                            </h4>
+                            </h4> */}
                         </div>
 
                         {Array(13).fill(1).map((el, i) =>
