@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import Button from '../components/Button'
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classes from "./category.module.css"
@@ -75,14 +74,14 @@ export default function Category() {
       backgroundColor: "white",
       mixBlendMode: "difference",
       opacity: 1
-  },
+    },
   }
   const buttonEnter = () => setCursorVariant("button");
   const buttonLeave = () => setCursorVariant("default");
   const linksEnter = () => setCursorVariant("links");
   const linksLeave = () => setCursorVariant("default");
-  const textEnter =()=> setCursorVariant("text");
-  const textLeave =()=> setCursorVariant("default");
+  const textEnter = () => setCursorVariant("text");
+  const textLeave = () => setCursorVariant("default");
 
   console.log(mousePositionX);
   console.log(mousePositionY);
@@ -98,83 +97,99 @@ export default function Category() {
   return (
     <>
       {isMobile ? <Warning /> :
-        <div>
-
-
+        <>
           <motion.div className="cursor" variants={variants} animate={cursorVariant}>
 
           </motion.div>
-          <div className={classes.closeButtonDiv} >
-            <Link href="/" >
-              <div onMouseEnter={buttonEnter} onMouseLeave={buttonLeave} className={classes.button} style={{ border: `0.3rem solid white`, }}>
-                <FontAwesomeIcon className={classes.icon} icon={faXmark} color="red" size="2x" />
-              </div>
-            </Link>
-          </div>
-          <div className={classes.grid}>
-            <div className={classes.gridContainer}>
-              <Link href="/dance"><motion.div onMouseEnter={linksEnter} onMouseLeave={linksLeave} className={classes.containeri1}>DANCE</motion.div></Link>
-              <Link href="/excercises"><motion.div onMouseEnter={linksEnter} onMouseLeave={linksLeave} className={classes.i2}>EXERCISE</motion.div></Link>
-              <Link href="/funMoves"><motion.div onMouseEnter={linksEnter} onMouseLeave={linksLeave} className={classes.i3} style={{ writingMode: "tb-rl" }}>FUN MOVES</motion.div></Link>
-              <Link href="/hiphop"><motion.div onMouseEnter={linksEnter} onMouseLeave={linksLeave} className={classes.i4} style={{ writingMode: "vertical-lr" }}>HIPHOP</motion.div></Link>
-              <Link href="/squats"><motion.div onMouseEnter={linksEnter} onMouseLeave={linksLeave} className={classes.i5}>SQUATS</motion.div></Link>
-              <Link href="/thriller"><motion.div onMouseEnter={linksEnter} onMouseLeave={linksLeave} className={classes.i6}>THRILLER</motion.div></Link>
+          <div>
 
-              <motion.div className={classes.container1} ref={constraintsRef1}>
-                <div className={classes.nullContentDiv}>
-                  <Image height={"200%"} src={Dance2} alt="ig"></Image>
-                </div>
-                <motion.div className={classes.item1} drag dragConstraints={constraintsRef1}></motion.div>
-              </motion.div>
-
-              <motion.div className={classes.container2} ref={constraintsRef2}>
-                <div className={classes.nullContentDiv}>
-                  <Image height={"200%"} src={Dance4} alt="ig"></Image>
-                </div>
-                <motion.div className={classes.item2} drag dragConstraints={constraintsRef2}></motion.div>
-              </motion.div>
-
-              <motion.div className={classes.container3} ref={constraintsRef3}>
-                <div className={classes.nullContentDiv}>
-                  <Image height={"500%"} src={Dance} alt="ig"></Image>
-                </div>
-                <motion.div className={classes.item3} drag dragConstraints={constraintsRef3}></motion.div>
-              </motion.div>
-
-              <motion.div className={classes.container4} ref={constraintsRef4}>
-                <div className={classes.nullContentDiv}>
-                  <Image height={"620%"} src={Dance5} alt="ig"></Image>
-                </div>
-                <motion.div className={classes.item4} drag dragConstraints={constraintsRef4}></motion.div>
-              </motion.div>
-
-              <motion.div className={classes.container5} ref={constraintsRef5}>
-                <div className={classes.nullContentDiv}>
-                  <Image height={"500%"} src={Dance3} alt="ig"></Image>
-                </div>
-                <motion.div className={classes.item5} drag dragConstraints={constraintsRef5}></motion.div>
-              </motion.div>
-
-              <motion.div className={classes.container6} ref={constraintsRef6}>
-                <div className={classes.textContentDiv}>
-                🗿 try something else 🗿
-                </div>
-                <motion.div className={classes.item6} drag dragConstraints={constraintsRef6}></motion.div>
-              </motion.div>
-
-              <motion.div className={classes.container7} ref={constraintsRef7}>
-                <div className={classes.textContentDiv}>
-                ❌ OPP&apos;S not this one ❌
-                </div>
-                <motion.div className={classes.item7} drag dragConstraints={constraintsRef7}></motion.div>
-              </motion.div>
-
+            <div className={classes.closeButtonDiv} >
+              <Link href="/" >
+                <motion.div initial={{ y: 0, opacity: 0, scale: 0.5 }}
+                  animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 7 }} onMouseEnter={buttonEnter} onMouseLeave={buttonLeave} className={classes.button} style={{ border: `0.3rem solid white`, }}>
+                  <FontAwesomeIcon className={classes.icon} icon={faXmark} color="red" size="2x" />
+                </motion.div>
+              </Link>
             </div>
+            <div className={classes.grid}>
+              <div className={classes.gridContainer}>
+                <Link href="/dance"><motion.div initial={{ y: 0, opacity: 0, scale: 0.5 }}
+                  animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 2 }} onMouseEnter={linksEnter} onMouseLeave={linksLeave} className={classes.containeri1}>DANCE</motion.div></Link>
+                <Link href="/excercises"><motion.div initial={{ y: 0, opacity: 0, scale: 0.5 }}
+                  animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 2.4 }} onMouseEnter={linksEnter} onMouseLeave={linksLeave} className={classes.i2}>EXERCISE</motion.div></Link>
+                <Link href="/funMoves"><motion.div initial={{ y: 0, opacity: 0, scale: 0.5 }}
+                  animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 2.8 }} onMouseEnter={linksEnter} onMouseLeave={linksLeave} className={classes.i3} style={{ writingMode: "tb-rl" }}>FUN MOVES</motion.div></Link>
+                <Link href="/hiphop"><motion.div initial={{ y: 0, opacity: 0, scale: 0.5 }}
+                  animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 3.2 }} onMouseEnter={linksEnter} onMouseLeave={linksLeave} className={classes.i4} style={{ writingMode: "vertical-lr" }}>HIPHOP</motion.div></Link>
+                <Link href="/squats"><motion.div initial={{ y: 0, opacity: 0, scale: 0.5 }}
+                  animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 3.6 }} onMouseEnter={linksEnter} onMouseLeave={linksLeave} className={classes.i5}>SQUATS</motion.div></Link>
+                <Link href="/thriller"><motion.div initial={{ y: 0, opacity: 0, scale: 0.5 }}
+                  animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 4 }} onMouseEnter={linksEnter} onMouseLeave={linksLeave} className={classes.i6}>THRILLER</motion.div></Link>
+
+                <motion.div initial={{ y: 0, opacity: 0, scale: 0.5 }}
+                  animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 1 }} className={classes.container1} ref={constraintsRef1}>
+                  <div className={classes.nullContentDiv}>
+                    <Image height={"200%"} src={Dance2} alt="ig"></Image>
+                  </div>
+                  <motion.div className={classes.item1} drag dragConstraints={constraintsRef1}></motion.div>
+                </motion.div>
+
+                <motion.div initial={{ y: 0, opacity: 0, scale: 0.5 }}
+                  animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 1 }} className={classes.container2} ref={constraintsRef2}>
+                  <div className={classes.nullContentDiv}>
+                    <Image height={"200%"} src={Dance4} alt="ig"></Image>
+                  </div>
+                  <motion.div className={classes.item2} drag dragConstraints={constraintsRef2}></motion.div>
+                </motion.div>
+
+                <motion.div initial={{ y: 0, opacity: 0, scale: 0.5 }}
+                  animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 1 }} className={classes.container3} ref={constraintsRef3}>
+                  <div className={classes.nullContentDiv}>
+                    <Image height={"500%"} src={Dance} alt="ig"></Image>
+                  </div>
+                  <motion.div className={classes.item3} drag dragConstraints={constraintsRef3}></motion.div>
+                </motion.div>
+
+                <motion.div initial={{ y: 0, opacity: 0, scale: 0.5 }}
+                  animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 1 }} className={classes.container4} ref={constraintsRef4}>
+                  <div className={classes.nullContentDiv}>
+                    <Image height={"620%"} src={Dance5} alt="ig"></Image>
+                  </div>
+                  <motion.div className={classes.item4} drag dragConstraints={constraintsRef4}></motion.div>
+                </motion.div>
+
+                <motion.div initial={{ y: 0, opacity: 0, scale: 0.5 }}
+                  animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 1 }} className={classes.container5} ref={constraintsRef5}>
+                  <div className={classes.nullContentDiv}>
+                    <Image height={"500%"} src={Dance3} alt="ig"></Image>
+                  </div>
+                  <motion.div className={classes.item5} drag dragConstraints={constraintsRef5}></motion.div>
+                </motion.div>
+
+                <motion.div initial={{ y: 0, opacity: 0, scale: 0.5 }}
+                  animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 1 }} className={classes.container6} ref={constraintsRef6}>
+                  <div className={classes.textContentDiv}>
+                    🗿 try something else 🗿
+                  </div>
+                  <motion.div className={classes.item6} drag dragConstraints={constraintsRef6}></motion.div>
+                </motion.div>
+
+                <motion.div initial={{ y: 0, opacity: 0, scale: 0.5 }}
+                  animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 1 }} className={classes.container7} ref={constraintsRef7}>
+                  <div className={classes.textContentDiv}>
+                    ❌ OPP&apos;S not this one ❌
+                  </div>
+                  <motion.div className={classes.item7} drag dragConstraints={constraintsRef7}></motion.div>
+                </motion.div>
+
+              </div>
+            </div>
+            <motion.div initial={{ y: 0, opacity: 0, scale: 0.5 }}
+              animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ delay: 5 }} className={classes.hintLine} onMouseEnter={textEnter} onMouseLeave={textLeave}>
+              Try to drag coloured boxes and find the easter eggs 🥚
+            </motion.div>
           </div>
-          <div className={classes.hintLine} onMouseEnter={textEnter} onMouseLeave={textLeave}>
-            Try to drag coloured boxes and find the easter eggs 🥚
-          </div>
-        </div>
+        </>
       }
 
     </>
